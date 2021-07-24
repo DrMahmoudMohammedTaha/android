@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/backColor"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/textColor2"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/text_mid"
+        android:id="@+id/qText"/>
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/choiceGroup">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:textColor="@color/textColor2"
+                android:textSize="@dimen/text_mid"
+                android:layout_height="30dp"
+                android:id="@+id/aRadio"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="@dimen/text_mid"
+                android:textColor="@color/textColor2"
+                android:id="@+id/bRadio"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="@dimen/text_mid"
+                android:textColor="@color/textColor2"
+                android:id="@+id/cRadio"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="@dimen/text_mid"
+                android:textColor="@color/textColor2"
+                android:id="@+id/dRadio"/>
+
+        </RadioGroup>
+
+</LinearLayout>

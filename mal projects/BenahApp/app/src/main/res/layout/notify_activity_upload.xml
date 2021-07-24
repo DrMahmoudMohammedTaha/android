@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/small_margin"
+    android:paddingLeft="@dimen/small_margin"
+    android:paddingRight="@dimen/small_margin"
+    android:paddingTop="@dimen/small_margin"
+    android:background="@color/backColor"
+    tools:context="com.example.dell.benahapp.notify.UploadActivity">
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b1"
+        android:layout_below="@+id/t1"
+        android:layout_alignParentLeft="true"
+        android:text="@string/Browse"
+        android:onClick="true"
+        android:background="@drawable/draw"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="@dimen/margin"        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b2"
+        android:layout_below="@+id/t1"
+        android:layout_alignParentRight="true"
+        android:text="@string/CANCEL"
+        android:onClick="true"
+        android:background="@drawable/draw"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="@dimen/margin"        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b3"
+        android:layout_below="@+id/b2"
+        android:layout_centerInParent="true"
+        android:text="@string/Upload"
+        android:onClick="true"
+        android:background="@drawable/draw"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="@dimen/margin"        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t1"
+        android:hint="select any type file"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin" />
+</RelativeLayout>

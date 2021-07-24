@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@color/backColor"
+    tools:context="com.example.dell.benahapp.ques.Student">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:layout_gravity="center"
+        android:textColor="@color/textColor2"
+        android:id="@+id/questionnaireName"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/huge_margin"
+        android:textColor="@color/textColor2"
+        android:id="@+id/listVew">
+
+    </ListView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/submitButton"
+        android:onClick="submit"
+        android:background="@drawable/draw"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/textColor"
+        android:text="@string/submit"/>
+
+</LinearLayout>

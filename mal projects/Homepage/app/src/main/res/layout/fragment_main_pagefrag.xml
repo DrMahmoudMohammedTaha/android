@@ -1,0 +1,120 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2" >
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/facultyname"
+            android:textSize="40dp"
+            android:layout_marginTop="120dp"
+            android:background="#f3b166" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/aboutfaculty"
+                android:textSize="40dp"
+                android:text="About faculty  "
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/facultyname"
+                android:layout_marginTop="5dp"
+                android:background="#f3b166" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/aboutfaculty"
+                android:layout_marginTop="10dp"
+                android:id="@+id/facultyimg"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vision"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/facultyimg"
+                android:layout_marginTop="5dp"
+                android:textSize="25dp"
+                android:text="Vision : "
+                android:layout_marginLeft="10dp"
+                android:background="#f3b166" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vision"
+                android:id="@+id/visiontex"
+                android:textSize="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/visiontex"
+                android:textSize="25dp"
+                android:background="#f3b166"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/message"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="Message : " />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/message"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/mssgtex"
+                android:textSize="14dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:layout_below="@+id/mssgtex"
+                android:layout_marginTop="5dp"
+                android:id="@+id/goal"
+                android:background="#f3b166"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="Goals : "/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/goalstex"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/goal"
+                android:textSize="14dp"/>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

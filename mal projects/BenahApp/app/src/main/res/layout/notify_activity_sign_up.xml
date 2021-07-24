@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/small_margin"
+    android:paddingLeft="@dimen/small_margin"
+    android:paddingRight="@dimen/small_margin"
+    android:paddingTop="@dimen/small_margin"
+    android:background="@color/backColor"
+    tools:context="com.example.dell.benahapp.notify.SignUp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Email"
+        android:id="@+id/username"
+        android:layout_alignParentLeft="true"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/sign_up_editText_username"
+        android:layout_alignTop="@+id/username"
+        android:layout_toRightOf="@+id/username"
+        android:layout_toEndOf="@+id/username"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Password"
+        android:id="@+id/pass"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sign_up_editText_username"
+        android:layout_marginTop="@dimen/small_margin"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/sign_up_editText_pass"
+        android:layout_alignTop="@+id/pass"
+        android:layout_toRightOf="@+id/pass"
+        android:layout_toEndOf="@+id/pass"
+        android:inputType="textPassword"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Job"
+        android:id="@+id/job"
+        android:layout_below="@+id/pass"
+        android:layout_alignParentLeft="true"
+        />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/editText_job"
+        android:layout_toRightOf="@+id/job"
+        android:layout_toEndOf="@+id/job"
+        android:layout_below="@id/sign_up_editText_pass"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_alignParentRight="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/signup"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_centerInParent="true"
+        android:text="@string/sign_up"
+        android:layout_below="@id/editText_job"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@drawable/draw"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/textColor"
+
+        />
+
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/signup"/>
+
+</RelativeLayout>

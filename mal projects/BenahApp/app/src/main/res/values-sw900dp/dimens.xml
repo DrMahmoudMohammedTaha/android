@@ -1,0 +1,13 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+    <dimen name="small_margin">50dp</dimen>
+    <dimen name="margin">70dp</dimen>
+    <dimen name="extra_margin">130dp</dimen>
+    <dimen name="huge_margin">1080dp</dimen>
+    <dimen name="wow_margin">1380dp</dimen>
+    <dimen name="text_small">25sp</dimen>
+    <dimen name="text_mid">40sp</dimen>
+    <dimen name="text_big">63sp</dimen>
+</resources>

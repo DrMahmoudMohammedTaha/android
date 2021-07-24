@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backColor"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.dell.benahapp.safe.safeWebView"
+    tools:showIn="@layout/safe_activity_web_view"
+    android:layout_margin="@dimen/small_margin"
+    android:id="@+id/webView">
+
+</WebView>

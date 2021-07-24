@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/margin"
+    android:paddingLeft="@dimen/margin"
+    android:paddingRight="@dimen/margin"
+    android:paddingTop="@dimen/margin"
+    tools:context="com.example.dell.benahapp.course.courseMain"
+    android:background="@color/backColor">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/academic_years"
+        android:id="@+id/textView2"
+        android:textSize="@dimen/text_big"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView2">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/extra_margin">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prep_year"
+                android:id="@+id/button11"
+                android:background="@drawable/draw"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_mid"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/civil"
+                android:background="@drawable/draw"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/textColor"
+                android:id="@+id/button22"
+                android:textSize="@dimen/text_mid"
+                android:layout_above="@+id/button77"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/archictect"
+                android:background="@drawable/draw"
+                android:textColor="@color/textColor"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/button33"
+                android:textSize="@dimen/text_mid"
+                android:layout_above="@+id/button22"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/measure"
+                android:background="@drawable/draw"
+                android:textColor="@color/textColor"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/button44"
+                android:textSize="@dimen/text_mid"
+                android:layout_below="@+id/button11"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/electrical"
+                android:id="@+id/button55"
+                android:background="@drawable/draw"
+                android:textColor="@color/textColor"
+                android:layout_marginBottom="10dp"
+                android:textSize="@dimen/text_mid"
+                android:layout_above="@+id/button66"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mechanical"
+                android:background="@drawable/draw"
+                android:textColor="@color/textColor"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/button66"
+                android:textSize="@dimen/text_mid"
+                android:layout_above="@+id/button88"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_mid"
+                android:text="@string/indutrial"
+                android:background="@drawable/draw"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/textColor"
+                android:id="@+id/button77"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/energy"
+                android:background="@drawable/draw"
+                android:textColor="@color/textColor"
+                android:id="@+id/button88"
+                android:textSize="@dimen/text_mid"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

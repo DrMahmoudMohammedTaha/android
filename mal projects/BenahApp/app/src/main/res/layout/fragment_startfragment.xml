@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backColor"
+    tools:context=".Major.studentservicefragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/backColor2"
+        app:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_toRightOf="@+id/universityimg"
+        android:layout_toEndOf="@+id/universityimg" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/universityimg"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/benha"
+        />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollViewmain"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/small_margin"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:background="@color/backColor"
+            tools:context=".Major.studentservicefragment"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_small"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:hint="@string/quick_earch"
+                tools:layout_editor_absoluteX="16dp"
+                android:textSize="@dimen/text_mid"
+                tools:layout_editor_absoluteY="16dp"
+
+                />
+
+            <Button
+                android:id="@+id/buttonGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text="@string/go"
+                android:background="@drawable/draw"
+                android:textColor="@color/textColor"
+                android:layout_alignParentTop="true"
+                android:textSize="@dimen/text_mid"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:layout_alignRight="@+id/gridView"
+                android:layout_alignEnd="@+id/gridView" />
+
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="@dimen/huge_margin"
+                android:layout_height="@dimen/wow_margin"
+                android:drawSelectorOnTop="true"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/margin"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"/>
+
+            <TextView
+                android:text="START | lunch 20.00 | Dinner 60.00 | Travel 60.00 | Doctor 5000.00 | lunch 20.00 | Dinner 60.00 | Travel 60.00 | Doctor 5000.00 | END"
+                android:id="@+id/newsTxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:layout_below="@+id/gridView"
+                android:background="@color/backColor2"
+                />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/small_margin"
+                android:id="@+id/button"
+                android:layout_below="@+id/newsTxt"
+                android:background="@color/backColor2"
+                />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/important_websites"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/small_margin"
+                android:id="@+id/button2"
+                android:layout_below="@+id/button"
+                android:background="@color/backColor"
+                />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contact"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/small_margin"
+                android:id="@+id/button3"
+                android:layout_below="@+id/button2"
+                android:background="@color/backColor2"
+                />
+
+
+
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lang_btn"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/small_margin"
+                android:id="@+id/button6"
+                android:layout_below="@+id/button3"
+                android:background="@color/backColor"
+                />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/top"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/small_margin"
+                android:id="@+id/button7"
+                android:layout_below="@+id/button6"
+                android:background="@color/backColor2"
+
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

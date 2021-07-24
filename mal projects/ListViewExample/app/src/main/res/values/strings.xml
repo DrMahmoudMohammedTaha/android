@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ListViewExample</string>
+    <string name="share">share</string>
+    <string name="like">like</string>
+    <string name="comment">comment</string>
+    <string name="trailers">Trailers ...</string>
+</resources>

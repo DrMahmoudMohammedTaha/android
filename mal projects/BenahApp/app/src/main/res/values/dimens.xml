@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="small_margin">16dp</dimen>
+    <dimen name="margin">25dp</dimen>
+    <dimen name="extra_margin">60dp</dimen>
+    <dimen name="huge_margin">340dp</dimen>
+    <dimen name="wow_margin">500dp</dimen>
+    <dimen name="text_small">11sp</dimen>
+    <dimen name="text_mid">16sp</dimen>
+    <dimen name="text_big">25sp</dimen>
+</resources>

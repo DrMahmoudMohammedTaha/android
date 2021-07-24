@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img8"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.zekra3.MainActivity" >
+
+    <Button
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/menu"
+        android:layout_alignBottom="@+id/menu"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="62dp"
+        android:text="@string/showHdith"
+        android:textSize="@dimen/my_diem" />
+
+    <Button
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="66dp"
+        android:layout_toRightOf="@+id/show"
+        android:text="@string/showMenu"
+        android:textSize="@dimen/my_diem" />
+
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/menu"
+        android:layout_marginRight="43dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/m15"
+        android:textSize="@dimen/my_diem" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/radioButton1"
+        android:layout_alignBottom="@+id/radioButton1"
+        android:layout_marginRight="22dp"
+        android:layout_toLeftOf="@+id/radioButton1"
+        android:text="@string/m30"
+        android:textSize="@dimen/my_diem" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/radioButton2"
+        android:layout_marginLeft="17dp"
+        android:text="@string/hour"
+        android:textSize="@dimen/my_diem" />
+
+    <Button
+        android:id="@+id/time"
+        style="@style/AppBaseTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton1"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/radioButton2"
+        android:text="@string/adjust"
+        android:textSize="@dimen/my_diem" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/time"
+        android:layout_below="@+id/time"
+        android:text="@string/close"
+        android:textSize="@dimen/my_diem" />
+
+</RelativeLayout>

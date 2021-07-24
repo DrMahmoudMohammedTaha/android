@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;NotificationStatusBarWithCustomView&apos;" deleteContents="true" description="Delete resource &apos;NotificationStatusBarWithCustomView&apos;" element1="/NotificationStatusBarWithCustomView" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1441833544981"/>&#x0A;<refactoring comment="Delete resource &apos;AlarmCreate&apos;" deleteContents="true" description="Delete resource &apos;AlarmCreate&apos;" element1="/AlarmCreate" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1441919382091"/>
+</session>

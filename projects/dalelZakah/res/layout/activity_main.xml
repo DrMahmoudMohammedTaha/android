@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dalelzakah.MainActivity" >
+
+    <Button
+        android:id="@+id/addGiven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/showGiven"
+        android:text="@string/addGiven" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/searchEdit"
+        android:layout_below="@+id/searchEdit"
+        android:layout_marginTop="25dp"
+        android:text="@string/search" />
+
+    <EditText
+        android:id="@+id/searchEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:hint="@string/enterName"
+        android:text="@string/vacant" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/showGiven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/searchBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="93dp"
+        android:text="@string/showGiven" />
+
+    <Button
+        android:id="@+id/addPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/addGiven"
+        android:layout_centerVertical="true"
+        android:text="@string/addName" />
+
+    <Button
+        android:id="@+id/showPoor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/showGiven"
+        android:layout_centerVertical="true"
+        android:text="@string/showNames" />
+
+</RelativeLayout>

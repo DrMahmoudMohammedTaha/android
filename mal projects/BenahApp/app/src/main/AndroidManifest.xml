@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dell.benahapp">
+
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".Major.splashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>`
+        </activity>
+
+        <activity android:name=".Major.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.Menu" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>`
+        </activity>
+
+
+        <activity android:name=".attend.AttendenceActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.ATTENDENCE" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>`
+        </activity>
+
+    <activity android:name=".attend.pluserActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.pluserism" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+        <activity android:name=".protal.portalMain">
+            <intent-filter>
+                <action android:name="android.intent.action.portal" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".gallery.galleryMain">
+            <intent-filter>
+                <action android:name="android.intent.action.gallery" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".gallery.Detail">
+            <intent-filter>
+                <action android:name="android.intent.action.gallerydetails" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".course.courseMain">
+            <intent-filter>
+                <action android:name="android.intent.action.courses" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".calender.calenderMain">
+            <intent-filter>
+                <action android:name="android.intent.action.calender" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".result.resultMain">
+            <intent-filter>
+                <action android:name="android.intent.action.resultr" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".maps.mapMain">
+            <intent-filter>
+                <action android:name="android.intent.action.mapsr" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".emergency.emergMain">
+            <intent-filter>
+                <action android:name="android.intent.action.emergency" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".navigate.ocr.MainOCR">
+            <intent-filter>
+                <action android:name="android.intent.action.main_ccr" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".navigate.CaptureActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.CAPTURE"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".navigate.HelpActivity"
+            android:screenOrientation="user">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".safe.safeMain">
+            <intent-filter>
+                <action android:name="android.intent.action.safe" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".safe.safeWebView">
+            <intent-filter>
+                <action android:name="android.intent.action.safeWeb" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".website.websiteActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.website" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".notify.notificationMain">
+            <intent-filter>
+                <action android:name="android.intent.action.notify" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".navigate.PreferencesActivity" />
+        <activity android:name=".login.LoginActivity" android:theme="@style/AppTheme" />
+
+        <activity android:name=".notify.SignIn" />
+        <activity android:name=".notify.SignUp" />
+        <activity android:name=".notify.HomeStudent" />
+        <activity android:name=".notify.HomeDoctor" />
+        <activity android:name=".notify.MoreNotification" />
+        <activity android:name=".notify.CourseUpdate" />
+        <activity android:name=".notify.UploadActivity"></activity>
+
+
+        <activity android:name=".ques.Student"></activity>
+
+    </application>
+
+</manifest>

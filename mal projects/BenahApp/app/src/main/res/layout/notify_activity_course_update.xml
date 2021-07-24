@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/small_margin"
+    android:paddingLeft="@dimen/small_margin"
+    android:paddingRight="@dimen/small_margin"
+    android:paddingTop="@dimen/small_margin"
+    android:background="@color/backColor"
+    tools:context="com.example.dell.benahapp.notify.CourseUpdate">
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/add"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentLeft="true"
+        android:text="@string/Upload"
+        android:background="@drawable/draw"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/textColor"
+
+        android:layout_marginTop="@dimen/small_margin"
+
+        />
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/update"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentRight="true"
+        android:text="@string/Update"
+        android:background="@drawable/draw"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="@dimen/small_margin"
+
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/delete"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Delete"
+        android:layout_below="@id/add"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@drawable/draw"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/textColor"
+        android:layout_centerInParent="true"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delete"
+        android:layout_marginTop="3dp"
+        android:id="@+id/listview"
+
+        />
+</RelativeLayout>

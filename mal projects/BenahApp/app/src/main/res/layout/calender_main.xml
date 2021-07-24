@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.benahapp.calender.calenderMain">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/compactcalendar_view"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:paddingLeft="@dimen/small_margin"
+            android:paddingRight="@dimen/small_margin"
+            app:compactCalendarBackgroundColor="@color/backColor"
+            app:compactCalendarCurrentDayBackgroundColor="@color/backColor2"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="@color/textColor"
+            app:compactCalendarMultiEventIndicatorColor="@color/textColor2"
+            app:compactCalendarTargetHeight="250dp"
+            app:compactCalendarTextColor="@color/textColor2"
+            app:compactCalendarTextSize="12sp" />
+
+        <TextView
+            android:id="@+id/events"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="25dp"
+            android:paddingTop="@dimen/margin"
+            android:textSize="@dimen/text_mid"
+            android:textColor="@color/textColor2"
+            android:textStyle="bold"
+            android:shadowColor="@color/textColor"
+            android:shadowDx="5"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:background="@drawable/my_border"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

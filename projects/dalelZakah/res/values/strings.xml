@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">دليل الزكاة</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_save">حفظ</string>
+    <string name="action_deleteAll">مسح شامل</string>
+    <string name="action_deleteGiven">مسح العطاءات</string>
+    <string name="vacant"></string>
+    <string name="search">ابحث</string>
+    <string name="showNames">اعرض  الاسماء</string>
+    <string name="showGiven">اعرض العطاءات</string>
+    <string name="addName">اضف اسم</string>
+    <string name="addGiven">اضف عطاء</string>
+    <string name="enterName">ادخل اسم للبحث</string>
+    <string name="returner">عودة</string>
+
+</resources>

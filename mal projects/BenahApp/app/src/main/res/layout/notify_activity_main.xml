@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/small_margin"
+    android:paddingLeft="@dimen/small_margin"
+    android:paddingRight="@dimen/small_margin"
+    android:paddingTop="@dimen/small_margin"
+    android:background="@color/backColor"
+    tools:context="com.example.dell.benahapp.notify.notificationMain">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/fac"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Faculty"
+        android:layout_alignParentLeft="true"
+        android:background="@color/backColor2"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/dep"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Department"
+        android:textAlignment="center"
+        android:layout_below="@+id/fac"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_alignParentLeft="true"
+        android:background="@color/backColor2"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/search_staff"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Staff_name"
+        android:textAlignment="center"
+        android:layout_below="@+id/dep"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_alignParentLeft="true"
+        android:background="@color/backColor2"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/course"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Course"
+        android:textAlignment="center"
+        android:layout_below="@+id/search_staff"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_alignParentLeft="true"
+        android:background="@color/backColor2"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerfac"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:layout_toRightOf="@+id/fac"
+        android:layout_toEndOf="@+id/fac"
+        android:layout_alignParentRight="true"
+
+        />
+    <Spinner
+        android:id="@+id/spinnerdep"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:layout_toRightOf="@+id/dep"
+        android:layout_toEndOf="@+id/dep"
+        android:layout_below="@+id/spinnerfac"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_alignParentRight="true"
+
+
+        />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/spinnerstaff"
+        android:layout_toRightOf="@+id/search_staff"
+        android:layout_toEndOf="@+id/search_staff"
+        android:layout_below="@id/spinnerdep"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_alignParentRight="true"
+        />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/spinnercourse"
+        android:layout_toRightOf="@+id/course"
+        android:layout_toEndOf="@+id/course"
+        android:layout_below="@id/spinnerstaff"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_alignParentRight="true"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/signin"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentLeft="true"
+        android:text="@string/Log_In"
+        android:layout_below="@id/course"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@drawable/draw"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/textColor"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/extra_margin"
+        android:id="@+id/signup"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentRight="true"
+        android:text="@string/sign_up"
+        android:layout_below="@id/spinnercourse"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@drawable/draw"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/textColor"
+
+        />
+
+</RelativeLayout>

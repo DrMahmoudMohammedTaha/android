@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">جامعة بنها</string>
+    <string name="lang_btn">English</string>
+    <string name="quick_earch">بحث سريع</string>
+    <string name="go">بحث</string>
+    <string name="email">بريد</string>
+    <string name="password">كلمة السر</string>
+    <string name="sign_in">تسجيل دخول</string>
+    <string name="cheating_list">قائمة الغش</string>
+    <string name="new_session">محاضرة جديدة</string>
+    <string name="OCR">OCR</string>
+    <string name="translation">Transition</string>
+    <string name="academic_years">الأعوام الدراسية</string>
+    <string name="prep_year">فرقة إعدادى هندسة</string>
+    <string name="civil">هندسة مدنية</string>
+    <string name="archictect">هندسة معمارية</string>
+    <string name="measure">هندسة مساحة</string>
+    <string name="electrical">هندسة كهربية</string>
+    <string name="mechanical">هندسة ميكانيكية</string>
+    <string name="indutrial">هندسة صناعية</string>
+    <string name="energy">هندسة الطاقة</string>
+    <string name="emergency">أرقام الطوارئ</string>
+    <string name="mission">الرؤية و الرسالة</string>
+    <string name="midicine">كلية الطب</string>
+    <string name="veterinary">كلية الطب البيطرى</string>
+    <string name="nursing">كلية التمريض</string>
+    <string name="science">كلية العلوم</string>
+    <string name="education">كلية التربية</string>
+    <string name="arts">كلية الفنون</string>
+    <string name="agriculture">كلية الزراعة</string>
+    <string name="physical">كلية التربية الرياضية</string>
+    <string name="law">كلية الحقوق</string>
+    <string name="shoubra">كلية هندسة شبرا</string>
+    <string name="tech">كلية حاسبات و معلومات</string>
+    <string name="engineer">هندسة بنها</string>
+    <string name="applied">كلية الفنون التطبيقية</string>
+    <string name="specific">كلية التربية النوعية</string>
+    <string name="important_websites">مواقع هامة</string>
+    <string name="contact">اتصل بنا</string>
+    <string name="top">اتجه لأعلى الصفحة</string>
+    <string name="done">تم</string>
+    <string name="indoor_navigation">موجه الطرق</string>
+    <string name="deststination">الوجهه</string>
+    <string name="current">المكان الحالى</string>
+    <string name="scan">صور اللوحة</string>
+    <string name="route">حدد طريق</string>
+    <string name="like">أعجبنى</string>
+    <string name="dislike">لم يعجبنى</string>
+    <string name="maps">الخرائط</string>
+    <string name="khalfawy">الخلفاوى</string>
+    <string name="rod_elfarg">روض الفرج</string>
+
+
+    <string name="Upload">رفع ملف</string>
+    <string name="Update">تحديث</string>
+    <string name="Delete">حذف</string>
+    <string name="Faculty">الكلية:</string>
+    <string name="Department">االقسم:</string>
+    <string name="Staff_name">المدرس:</string>
+    <string name="Course">الكورس:</string>
+    <string name="Log_Out">تسجيل خروج</string>
+    <string name="Notification">اشعارات</string>
+    <string name="Log_In">تسجيل دخول</string>
+    <string name="Course_name">اسم الكورس</string>
+    <string name="Clear_Notification">حذف اشعارات</string>
+    <string name="Email">ايميل:</string>
+    <string name="Password">باسورد</string>
+    <string name="Job">العمل:</string>
+    <string name="sign_up">تسجيل</string>
+    <string name="Browse">تصفح</string>
+    <string name="CANCEL">إغلاق</string>
+
+
+</resources>

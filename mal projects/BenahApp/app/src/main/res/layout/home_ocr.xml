@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backColor"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+  <ScrollView
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:id="@+id/scrollView4">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/indoor_navigation"
+        android:id="@+id/textView4"
+        android:textSize="@dimen/text_big"
+        />
+
+
+
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_marginTop="@dimen/margin"
+          android:layout_marginBottom="@dimen/margin"
+
+          >
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/deststination"
+        android:id="@+id/textView"
+        android:textSize="@dimen/text_mid"
+          />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/dest_p"
+        android:layout_marginLeft="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:textSize="@dimen/text_mid"
+
+        />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/current"
+        android:id="@+id/textView2"
+        android:textSize="@dimen/text_mid"
+
+        />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/current_p"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:textSize="@dimen/text_mid"
+        />
+
+
+      </LinearLayout>>
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/scan"
+          android:id="@+id/scanner"
+          android:background="@drawable/draw"
+          android:textSize="@dimen/text_mid"
+          android:textColor="@color/textColor"
+          android:layout_marginTop="@dimen/margin"
+
+          />
+
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/route"
+          android:id="@+id/router"
+          android:layout_marginTop="@dimen/margin"
+          android:textSize="@dimen/text_mid"
+          android:background="@drawable/draw"
+          android:textColor="@color/textColor" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/text_mid"
+          android:layout_marginTop="@dimen/margin"
+          android:id="@+id/instructions" />
+
+    </LinearLayout>
+  </ScrollView>
+
+
+</LinearLayout>

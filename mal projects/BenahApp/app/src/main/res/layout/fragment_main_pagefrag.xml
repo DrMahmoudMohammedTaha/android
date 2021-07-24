@@ -1,0 +1,407 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Major.MainActivity"
+    android:background="@color/backColor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/facultyname"
+        android:textSize="@dimen/text_big"
+        android:text="@string/mission"
+        android:background="@color/backColor2"
+        android:layout_alignParentTop="true"
+        />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/missonData"
+            android:textSize="@dimen/text_mid"
+            android:text=""
+            android:background="@color/backColor"
+            android:textColor="@color/textColor2"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/small_margin"
+            />
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+        android:layout_alignParentTop="true">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".Major.MainActivity">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="217dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/midicine"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/draw"
+                        android:textSize="@dimen/text_mid"
+                        android:textColor="@color/textColor"
+                        android:onClick="showMission"
+                        />
+
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/medicine"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/veterinary"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:textSize="@dimen/text_mid"
+                        android:background="@drawable/draw"
+                        android:textColor="@color/textColor"
+                        android:onClick="showMission"
+                        />
+
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/veter"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nursing"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:textSize="@dimen/text_mid"
+                        android:background="@drawable/draw"
+                        android:textColor="@color/textColor"
+                        android:onClick="showMission"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/nurse"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/science"
+                        android:background="@drawable/draw"
+                        android:textSize="@dimen/text_mid"
+                        android:textColor="@color/textColor"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:onClick="showMission"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/science"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/education"
+                        android:textSize="@dimen/text_mid"
+                        android:background="@drawable/draw"
+                        android:textColor="@color/textColor"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:onClick="showMission"/>
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/edu"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/arts"
+                        android:background="@drawable/draw"
+                        android:textSize="@dimen/text_mid"
+                        android:textColor="@color/textColor"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:onClick="showMission"/>
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/art"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agriculture"
+                        android:background="@drawable/draw"
+                        android:textSize="@dimen/text_mid"
+                        android:textColor="@color/textColor"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:onClick="showMission"
+                        />
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/art"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/physical"
+                        android:background="@drawable/draw"
+                        android:textSize="@dimen/text_mid"
+                        android:textColor="@color/textColor"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:onClick="showMission"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/phy"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/law"
+                        android:textSize="@dimen/text_mid"
+                        android:background="@drawable/draw"
+                        android:textColor="@color/textColor"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:onClick="showMission"
+                        android:width="219dp" />
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/low"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shoubra"
+                        android:textSize="@dimen/text_mid"
+                        android:background="@drawable/draw"
+                        android:textColor="@color/textColor"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:id="@+id/shoubra"
+                        android:onClick="showMission"
+                        android:width="219dp" />
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/shoubra"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tech"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:textSize="@dimen/text_mid"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/draw"
+                        android:textColor="@color/textColor"
+                        android:onClick="showMission"
+                        android:width="219dp" />
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/computer"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/engineer"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:textSize="@dimen/text_mid"
+                        android:background="@drawable/draw"
+                        android:textColor="@color/textColor"
+                        android:onClick="showMission"
+                        android:width="219dp" />
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/benha_eng"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/applied"
+                        android:textSize="@dimen/text_mid"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/draw"
+                        android:textColor="@color/textColor"
+                        android:onClick="showMission"
+                        android:width="219dp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/art"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="219dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/specific"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:textSize="@dimen/text_mid"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/draw"
+                        android:textColor="@color/textColor"
+                        android:onClick="showMission"
+                        android:width="219dp" />
+                    <ImageView
+                        android:layout_width="@dimen/extra_margin"
+                        android:layout_height="@dimen/extra_margin"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:background="@drawable/spec"
+                        />
+                </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>
