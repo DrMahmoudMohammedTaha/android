@@ -1,0 +1,908 @@
+<!DOCTYPE html> 
+ <html class="wf-automate-n7-active wf-futurapt-i4-active wf-futurapt-i5-active wf-futurapt-i7-active wf-futurapt-n4-active wf-futurapt-n5-active wf-futurapt-n7-active wf-minionprosubhead-n4-active wf-museoslab-n7-active wf-active"><head> 
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+ <title>Classification in the presence of missing data</title> 
+ <meta charset="utf-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+ <link rel="canonical" href="https://www.mathworks.com/solutions/machine-learning/examples.html?file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da"> 
+ <!-- BEGIN Adobe DTM --> 
+ <script type="text/javascript" async="" src="Classification%20in%20the%20presence%20of%20missing%20data_files/elqCfg.js"></script><script type="text/javascript" async="" src="Classification%20in%20the%20presence%20of%20missing%20data_files/ahy.js"></script><script src="Classification%20in%20the%20presence%20of%20missing%20data_files/aquant.js" async="" type="text/javascript"></script><script src="Classification%20in%20the%20presence%20of%20missing%20data_files/satelliteLib-e8d23c2e444abadc572df06537e2def59c01db09.js"></script><script src="Classification%20in%20the%20presence%20of%20missing%20data_files/mbox-contents-95c6a4d9c82a8d20476522984666120b54192e9b.js"></script><script src="Classification%20in%20the%20presence%20of%20missing%20data_files/satellite-56972e2c64746d54aa00cb73.js"></script><style>.mboxDefault { visibility:hidden; }</style><script src="Classification%20in%20the%20presence%20of%20missing%20data_files/target.js"></script><script src="Classification%20in%20the%20presence%20of%20missing%20data_files/ajax_002"></script> 
+ <!-- END Adobe DTM --> 
+ <link href="Classification%20in%20the%20presence%20of%20missing%20data_files/bootstrap.css" rel="stylesheet" type="text/css"> 
+ <link href="Classification%20in%20the%20presence%20of%20missing%20data_files/site6.css" rel="stylesheet" type="text/css"> 
+ <link href="Classification%20in%20the%20presence%20of%20missing%20data_files/site6_lg.css" rel="stylesheet" media="screen and (min-width: 1200px)"> 
+ <link href="Classification%20in%20the%20presence%20of%20missing%20data_files/site6_md.css" rel="stylesheet" media="screen and (min-width: 992px) and (max-width: 1199px)"> 
+ <link href="Classification%20in%20the%20presence%20of%20missing%20data_files/site6_smxs.css" rel="stylesheet" media="screen and (max-width: 991px)"> 
+ <link href="Classification%20in%20the%20presence%20of%20missing%20data_files/site6_sm.css" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 991px)"> 
+ <link href="Classification%20in%20the%20presence%20of%20missing%20data_files/site6_xs.css" rel="stylesheet" media="screen and (max-width: 767px)"> 
+ <!--[if IE 8]> 
+ <link href="/includes_content/responsive/css/site6_ie8.css" rel="stylesheet" type="text/css"> 
+ <script src="/includes_content/responsive/scripts/bootstrap/html5shiv-printshiv.js"></script> 
+ <script src="/includes_content/responsive/scripts/bootstrap/respond.min.js"></script> 
+ <![endif]--> 
+ <!--[if IE 9]> 
+ <link href="/includes_content/responsive/css/site6_ie9.css" rel="stylesheet" type="text/css"> 
+ <![endif]--> 
+ <link href="Classification%20in%20the%20presence%20of%20missing%20data_files/site6_print.css" rel="stylesheet" type="text/css" media="print"> 
+ <link rel="stylesheet" href="Classification%20in%20the%20presence%20of%20missing%20data_files/solutions.css"> 
+ <!--[if IE 8]> 
+ <link href="/includes_content/responsive/css/solutions/solutions_ie8.css" rel="stylesheet" type="text/css"> 
+ <![endif]--> 
+ <!--[if IE 9]> 
+ <link href="/includes_content/responsive/css/solutions/solutions_ie9.css" rel="stylesheet" type="text/css"> 
+ <![endif]--> 
+ <script src="Classification%20in%20the%20presence%20of%20missing%20data_files/jquery-latest.js"></script> 
+ <script src="Classification%20in%20the%20presence%20of%20missing%20data_files/jquery_002.js"></script> 
+ <script src="Classification%20in%20the%20presence%20of%20missing%20data_files/bootstrap.js"></script> 
+ <script src="Classification%20in%20the%20presence%20of%20missing%20data_files/global.js"></script> 
+ <script src="Classification%20in%20the%20presence%20of%20missing%20data_files/anchor.js"></script> 
+ <script src="Classification%20in%20the%20presence%20of%20missing%20data_files/xvy5baa.js"></script> 
+ <style type="text/css">.tk-museo-slab{font-family:"museo-slab",serif;}.tk-futura-pt{font-family:"futura-pt","Arial","Helvetica",sans-serif;}.tk-automate{font-family:"automate",sans-serif;}.tk-minion-pro-subhead{font-family:"minion-pro-subhead",serif;}</style><link rel="stylesheet" href="Classification%20in%20the%20presence%20of%20missing%20data_files/xvy5baa-l.css" media="all"><script>try{Typekit.load();}catch(e){}</script> 
+ <meta name="description" content="Learn about MATLAB support for machine learning. Resources include examples, documentation, and code describing different machine learning algorithms."> 
+ <meta name="keywords" content="Machine learning algorithms improve task performance as the size of the training set increases"> 
+ <script type="text/javascript" src="Classification%20in%20the%20presence%20of%20missing%20data_files/jquery.js"></script> 
+ <script type="text/javascript"> 
+ (function() { 
+ // Check if cookies are enabled 
+ function cookiesEnabled() { 
+ return $.cookie('check', 'valid', { expires: 1 }) && $.cookie('check') == 'valid'; 
+ } 
+ // Set the language of the domain and redirect to the domain 
+ function setDomainLanguage(language) { 
+ if($.cookie("lang") != null) { 
+ $.removeCookie("lang"); 
+ } 
+ $.cookie("lang", 'lang=' + language, {path: '/', expires: 365, domain: 'ch.mathworks.com'}); 
+ } 
+ // do not display the domain selector if querystring is not present 
+ // or if query string has nocookie value 
+ // or if cookies are disabled 
+ var displayDomainSelector = true; 
+ function detectDomain() { 
+ var queries = {}; 
+ $.each(document.location.search.substr(1).split('&'), function(c,q){ 
+ if(q != undefined && q != "") { 
+ var i = q.split('='); 
+ if(i[1] != undefined) { 
+ queries[i[0].toString()] = i[1].toString(); 
+ } 
+ } 
+ }); 
+ var requested_domain = (queries['requestedDomain'] != undefined) ? queries['requestedDomain'] : ""; 
+ var nocookie = (queries['nocookie'] != undefined) ? queries['nocookie'] : ""; 
+ var client = (queries['client'] != undefined) ? queries['client'] : ""; 
+ if(requested_domain == "" || nocookie == "true" || !cookiesEnabled() || client == "addons" || window.overrideDomainSelector) { 
+ displayDomainSelector = false; 
+ } 
+ } 
+ detectDomain(); 
+ function extractDomain(url) { 
+ var domain; 
+ //find & remove protocol (http, ftp, etc.) and get domain 
+ if (url.indexOf("://") > -1) { 
+ domain = url.split('/')[2]; 
+ } else { 
+ domain = url.split('/')[0]; 
+ } 
+ //find & remove port number 
+ domain = domain.split(':')[0]; 
+ return domain; 
+ } 
+ function getDomainContent(returnContent) { 
+ // Get the location information from the marketing site 
+ $.ajax({ 
+ url : "/includes_content/domainSelect/location.html", 
+ type : "get", 
+ async: false, 
+ success : function(data) { 
+ $("#location_content").html(data); 
+ var button_link = $("#button_link").text(); 
+ var current_location = $("#current_location").text(); 
+ var location_key = $("#location_key").text(); 
+ //Set the location in the text and button 
+ $(".text_location").text(current_location); 
+ $("#domain_select_button").text("Select " + current_location); 
+ // if the current location is different from the browser location, update the button functionality 
+ var browser_domain = extractDomain(window.location.href); 
+ if(button_link.indexOf(browser_domain) == -1) { 
+ // Get the current page link from the links within the selector 
+ new_button_link = $("." + location_key).attr("href"); 
+ $("#domain_select_button").attr("href",new_button_link); 
+ $("#domain_select_button").removeAttr("data-dismiss"); 
+ } 
+ } 
+ }); 
+ if(returnContent) { 
+ return $('#country-unselected').html(); 
+ } 
+ } 
+ $(document).ready(function () { 
+ //setLocation(); 
+ // determine if links need to be rewritten 
+ if ( $( "#country-unselected li a" ).length ) { 
+ $("#country-unselected li a").each(function() { 
+ var link_url = $(this).attr("href").replace(/%26requestedDomain(%3D[^%26|&]*)?|requestedDomain(%3D[^%26|&]*)?(%26)?/, ""); 
+ $(this).attr("href", link_url); 
+ }); 
+ } 
+ if ( $( "li.headernav_login > a" ).length ) { 
+ var login_url = $("li.headernav_login > a").attr("href").replace(/%26requestedDomain(%3D[^%26|&]*)?|requestedDomain(%3D[^%26|&]*)?(%26)?/, ""); 
+ $("li.headernav_login > a").attr("href", login_url); 
+ } 
+ if ( $( "li.mwa-nav_logout > a" ).length ) { 
+ var login_url = $("li.mwa-nav_logout > a").attr("href").replace(/%26requestedDomain(%3D[^%26|&]*)?|requestedDomain(%3D[^%26|&]*)?(%26)?/, ""); 
+ $("li.mwa-nav_logout > a").attr("href", login_url); 
+ } 
+ if ( $( ".mwa-nav li a" ).length ) { 
+ $(".mwa-nav li a").each(function() { 
+ var link_url = $(this).attr("href").replace(/%26requestedDomain(%3D[^%26|&]*)?|requestedDomain(%3D[^%26|&]*)?(%26)?/, ""); 
+ $(this).attr("href", link_url); 
+ }); 
+ } 
+ $('body').on('click','.footernav_country a',function(){ 
+ getDomainContent(false); 
+ }); 
+ // set the click function for Switzerland/French link 
+ $('body').on('click','#swiss_french',function(){ 
+ setDomainLanguage('fr'); 
+ }); 
+ // set the click function for the Switzerland/German link 
+ $('body').on('click','#swiss_german',function(){ 
+ setDomainLanguage('de'); 
+ }); 
+ }); 
+ // onload functionality for the selector 
+ $(document).ready(function () { 
+ if(displayDomainSelector) { 
+ getDomainContent(false); 
+ $('#country-unselected').modal('show'); 
+ } 
+ }); 
+ })(jQuery); 
+ </script> 
+ <script src="Classification%20in%20the%20presence%20of%20missing%20data_files/satellite-5480c4083639370018670600.js"></script><script src="Classification%20in%20the%20presence%20of%20missing%20data_files/s-code-contents-73da148cb454c4f6e395aa8df704854c99540662.js"></script><script src="Classification%20in%20the%20presence%20of%20missing%20data_files/ajax"></script><style type="text/css" id="ki-rro-rl"></style><style type="text/css" id="ki-rro-r3"></style></head> 
+    
+ <body id="responsive_b"><div class="mboxDefault" id="mbox-target-global-mbox-e468a4af0a44434f8593937d26d691ce" style="visibility: visible; display: block;"></div> 
+  
+   <!-- Mobile TopNav: Start --> 
+ <div class="header visible-xs visible-sm" id="header_mobile" translate="no" style=""> 
+ <nav class="navbar navbar-default" role="navigation"> 
+ <div class="container"> 
+ <div class="row"> 
+ <div class="col-xs-12"> 
+ <div class="navbar-header"> 
+ <button type="button" class="navbar-toggle topnav_toggle" data-toggle="collapse" data-target="#topnav_collapse"> 
+ <span class="sr-only">Toggle Main Navigation</span> 
+ <span class="icon-menu"></span> 
+ </button> 
+ <a href="http://www.mathworks.com/index.html?s_tid=gn_logo" class="svg_link navbar-brand"> 
+ <img src="Classification%20in%20the%20presence%20of%20missing%20data_files/pic-header-mathworks-logo.svg" class="mw_logo" alt="MathWorks"> 
+ </a> 
+ </div> 
+ </div> 
+ </div> 
+ <div class="row visible-xs visible-sm"> 
+ <div class="col-xs-12"> 
+ <div class="navbar-collapse collapse" id="topnav_collapse"> 
+ <ul class="nav navbar-nav" id="topnav"> 
+ <li class="headernav_login"> 
+ <a href="https://www.mathworks.com/login?uri=http://www.mathworks.com/solutions/machine-learning/examples.html%3Ffile%3D%252Fproducts%252Fdemos%252Fmachine-learning%252Fmissing_data%252Fmissing_data.html%26s_eid%3DPSM_da" class="mwa-nav_login">Log In</a> 
+ </li> 
+ <li class="topnav_products "><a href="http://www.mathworks.com/products/?s_tid=gn_ps">Products</a></li> 
+ <li class="topnav_solutions active"><a href="http://www.mathworks.com/solutions/?s_tid=gn_sol">Solutions</a></li> 
+ <li class="topnav_academia "><a href="http://www.mathworks.com/academia/?s_tid=gn_acad">Academia</a></li> 
+ <li class="topnav_support "><a href="http://www.mathworks.com/support/?s_tid=gn_supp">Support</a></li> 
+ <li class="topnav_community "><a href="http://www.mathworks.com/matlabcentral/?s_tid=gn_mlc">Community</a></li> 
+ <li class="topnav_events "><a href="http://www.mathworks.com/company/events/?s_tid=gn_ev">Events</a></li> 
+ <li class="headernav_contact"><a href="http://www.mathworks.com/company/aboutus/contact_us/?s_tid=gn_cntus">Contact Us</a></li> 
+ <li class="headernav_store"><a href="http://www.mathworks.com/store?s_cid=store_top_nav&amp;s_tid=gn_store">How To Buy</a></li> 
+ </ul> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ </nav> 
+ </div> 
+ <!-- Mobile TopNav: End --> 
+ <!-- Desktop TopNav: Start --> 
+ <div class="header hidden-xs hidden-sm" id="header_desktop" translate="no"> 
+ <nav class="navbar navbar-default" role="navigation"> 
+ <div class="container"> 
+ <div class="row"> 
+ <div class="col-xs-12"> 
+ <div class="collapse navbar-collapse" id="headernav_collapse"> 
+ <ul class="nav navbar-nav navbar-right" id="headernav"> 
+ <li class="headernav_contact"><a href="http://www.mathworks.com/company/aboutus/contact_us/?s_tid=gn_cntus">Contact Us</a></li> 
+ <li class="headernav_store"><a href="http://www.mathworks.com/store?s_cid=store_top_nav&amp;s_tid=gn_store">How To Buy</a></li> 
+ <li class="headernav_login"> 
+ <a href="https://www.mathworks.com/login?uri=http://www.mathworks.com/solutions/machine-learning/examples.html%3Ffile%3D%252Fproducts%252Fdemos%252Fmachine-learning%252Fmissing_data%252Fmissing_data.html%26s_eid%3DPSM_da" class="mwa-nav_login">Log In</a> 
+ </li> 
+ </ul> 
+ </div> 
+ </div> 
+ </div> 
+ <div class="row"> 
+ <div class="col-xs-12"> 
+ <div class="navbar-header"> 
+ <div class="logo_container hidden-xs hidden-sm"> 
+ <a href="http://www.mathworks.com/index.html?s_tid=gn_logo" class="svg_link pull-left"> 
+ <img src="Classification%20in%20the%20presence%20of%20missing%20data_files/pic-header-mathworks-logo.svg" class="mw_logo" alt="MathWorks"> 
+ </a> 
+ </div> 
+ <div class="navbar-collapse collapse hidden-xs hidden-sm"> 
+ <ul class="nav navbar-nav" id="topnav"> 
+ <li class="topnav_products "><a href="http://www.mathworks.com/products/?s_tid=gn_ps">Products</a></li> 
+ <li class="topnav_solutions active"><a href="http://www.mathworks.com/solutions/?s_tid=gn_sol">Solutions</a></li> 
+ <li class="topnav_academia "><a href="http://www.mathworks.com/academia/?s_tid=gn_acad">Academia</a></li> 
+ <li class="topnav_support "><a href="http://www.mathworks.com/support/?s_tid=gn_supp">Support</a></li> 
+ <li class="topnav_community "><a href="http://www.mathworks.com/matlabcentral/?s_tid=gn_mlc">Community</a></li> 
+ <li class="topnav_events "><a href="http://www.mathworks.com/company/events/?s_tid=gn_ev">Events</a></li> 
+ </ul> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ <!-- Breadcrumbs: Start --> 
+ <div class="container"> 
+ <div class="row"> 
+ <div class="col-xs-12"> 
+ <div class="breadcrumbs" style="display:none"> 
+ <ul class="list-unstyled list-inline"> 
+ <li class="icon-arrow-open-right" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="http://www.mathworks.com/solutions/?s_tid=brdcrb" itemprop="url"><span itemprop="title">Solutions</span></a></li> 
+ <li class="icon-arrow-open-right" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> 
+ <a href="http://www.mathworks.com/solutions/machine-learning/examples.html" itemprop="url" style="color:#3C3C3C; text-decoration:none;"><span itemprop="title">Machine Learning with MATLAB</span></a></li> 
+ </ul> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ <!-- Breadcrumbs: End --> 
+ </div> 
+ </nav> 
+ </div> 
+ <!-- Desktop TopNav: End --> 
+ <!-- Conjoined Header: Start --> 
+ <div class="sticky_header_container includes_subnav affix-top"> 
+ <!-- Section Header: Start --> 
+ <div class="section_header level_3"> 
+ <div class="container"> 
+ <div class="row" id="mobile_search_row"> 
+ <div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-5 col-md-push-7" id="mobile_search"> 
+ <div class="search_nested_content_container"> 
+ <form name="search" id="site_search" class="site_search" action="/search/site_search.html" method="get"> 
+ <div class="input-group"> 
+ <label class="sr-only">Search MathWorks.com</label> 
+ <input name="c[]" value="entire_site" type="hidden"> 
+ <input name="q" id="query" class="form-control conjoined_search" placeholder="Search MathWorks.com" autocomplete="off" type="text"> 
+ <div class="input-group-btn"> 
+ <button type="submit" id="searchbutton" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button> 
+ </div> 
+ </div> 
+ </form> 
+ </div> 
+ <button class="btn icon-remove btn_search pull-right icon_32 visible-xs" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button> 
+ </div> 
+ <div class="col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5 has_horizontal_local_nav" id="section_header_title"> 
+ <div class="section_header_content"> 
+ <div class="section_header_title"> 
+ <h1>Machine Learning with MATLAB</h1> 
+ </div> 
+ <button type="button" class="navbar-toggle collapsed subnav visible-xs visible-sm" data-toggle="collapse" data-target=".mobile_subnav_content"> <span class="icon-arrow-down icon_24"></span> </button> 
+ </div> 
+ </div> 
+ <div class="visible-xs" id="search_actuator"> 
+ <button class="btn icon-search btn_search pull-right icon_16" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button> 
+ </div> 
+ </div> 
+ <!-- Section Header: End --> 
+ <!-- Mobile Local Nav: Start --> 
+ <div class="row visible-xs visible-sm" id="mobile_subnav"> 
+ <div class="col-xs-12"> 
+ <div class="navbar-collapse collapse mobile_subnav_content"> 
+ <ul class="nav navbar-nav subnav"> 
+ <li class=""> 
+ <a href="http://www.mathworks.com/solutions/machine-learning/index.html">Overview</a> 
+ </li><li class="active"> 
+ <a href="http://www.mathworks.com/solutions/machine-learning/examples.html">Examples</a> 
+ </li> 
+ </ul> 
+ </div> 
+ </div> 
+ </div> 
+ <!-- Mobile Local Nav: End --> 
+ </div> 
+ </div> 
+ <!-- Horo Nav: Start --> 
+ <div class="horizontal_nav hidden-xs hidden-sm"> 
+ <div class="horizontal_nav_container"> 
+ <div class="container"> 
+ <div class="row"> 
+ <div class="col-md-8 col-lg-9 hidden-xs hidden-sm"> 
+ <nav class="navbar navbar-default" role="navigation" id="subnav"> 
+ <div class="collapse navbar-collapse"> 
+ <ul class="nav navbar-nav"> 
+ <li class=""> 
+ <a href="http://www.mathworks.com/solutions/machine-learning/index.html">Overview</a> 
+ </li><li class="active"> 
+ <a href="http://www.mathworks.com/solutions/machine-learning/examples.html">Examples</a> 
+ </li> 
+ </ul> 
+ </div> 
+ </nav> 
+ </div> 
+ <div class="col-md-4 col-lg-3 hidden-xs hidden-sm"> 
+ <div class="cta_box"> 
+ <ul class="list-inline"> 
+ <li class="cta_item cta_item_general"><a href="http://www.mathworks.com/company/aboutus/contact_us/contact_sales.html?s_iid=solew_sales_mlr_tb" class="icon-phone">Contact sales</a></li> 
+ <li class="cta_item cta_item_general"><a href="http://www.mathworks.com/programs/trials/trial_request.html?s_iid=solew_trial_mlr_tb" class="icon-download">Trial software</a></li> 
+ </ul> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ <!-- Horo Nav: End --> 
+ </div> 
+ <!-- Conjoined Header: End --> 
+      
+  
+   <!-- MOBILE CTA - Begin --> 
+   <div class="cta_container_mobile visible-sm visible-xs"> 
+     <div class="container-fluid">       
+       <div class="row"> 
+         <div class="col-xs-12"> 
+           <div class="cta_box"> 
+ <ul class="list-inline"> 
+ <li class="cta_item cta_item_general"><a href="http://www.mathworks.com/company/aboutus/contact_us/contact_sales.html?s_iid=solew_sales_mlr_tb" class="icon-phone">Contact sales</a></li> 
+ <li class="cta_item cta_item_general"><a href="http://www.mathworks.com/programs/trials/trial_request.html?s_iid=solew_trial_mlr_tb" class="icon-download">Trial software</a></li> 
+ </ul> 
+ </div>  
+         </div> 
+       </div> 
+     </div> 
+   </div> 
+   <!-- MOBILE CTA - End --> 
+      
+  
+   <div class="content_container"> 
+     <div class="container">         
+       <div class="row"> 
+         <div class="col-xs-12"> 
+                      
+  
+  
+  
+  
+  
+  
+  
+       
+ <style type="text/css"> 
+ pre { 
+ 	white-space: pre-wrap; 
+ } 
+ </style> 
+  
+  
+  
+ <h1>Classification in the Presence of Missing Data</h1><!--introduction--><!--/introduction--> 
+ <p><em>  
+  
+  
+  
+  
+  
+  
+  
+     
+     <a href="http://www.mathworks.com/solutions/machine-learning/examples.html?s_iid=solew_trial_mlr_cta1" class="icon-chevron">View all machine learning examples </a> 
+ </em></p><p>Missing data is quite common when dealing with real world  
+ datasets. There are several ways to improve prediction accuracy when  
+ missing data in some predictors without completely discarding the entire 
+  observation. This example shows how decision trees with surrogate  
+ splits can be used to improve prediction accuracy in the presence of  
+ missing data.</p><h2>Load Data for Classification<a name="2"></a></h2><pre class="code">rng(5); <span class="comment">% For reproducibility</span> 
+ load <span class="string">ionosphere</span>; 
+ labels = unique(Y); 
+ </pre><h2>Partition 70% of the Data into a Training Set and 30% into a Test Set<a name="3"></a></h2><pre class="code">cv = cvpartition(Y,<span class="string">'holdout'</span>,0.3); 
+ Xtrain = X(training(cv),:); 
+ Ytrain = Y(training(cv)); 
+ Xtest = X(test(cv),:); 
+ Ytest = Y(test(cv)); 
+ </pre><h2>Use Bagged Decision Trees to Classify the Ionosphere Data<a name="4"></a></h2> 
+ <p>Bagging (bootstrap aggregating), is an ensemble approach which  
+ involves training several weak learners to create a strong classifier.</p><pre class="code"><span class="comment">% Classification Tree is chosen as the learner</span> 
+ mdl1 = ClassificationTree.template(<span class="string">'NVarToSample'</span>,<span class="string">'all'</span>); 
+ RF1 = fitensemble(Xtrain,Ytrain,<span class="string">'Bag'</span>,150,mdl1,<span class="string">'type'</span>,<span class="string">'classification'</span>); 
+  
+ <span class="comment">% Classification Tree with surrogate splits is chosen as the learner</span> 
+ mdl2 = ClassificationTree.template(<span class="string">'NVarToSample'</span>,<span class="string">'all'</span>,<span class="string">'surrogate'</span>,<span class="string">'on'</span>); 
+ RF2 = fitensemble(Xtrain,Ytrain,<span class="string">'Bag'</span>,150,mdl2,<span class="string">'type'</span>,<span class="string">'classification'</span>); 
+ </pre><p>Suppose half of the values in the test set are missing:</p><pre class="code">Xtest(rand(size(Xtest))&gt;0.5) = NaN; 
+ </pre><h2>Predict Responses Using Both Approaches<a name="6"></a></h2><pre class="code">y_pred1 = predict(RF1,Xtest); 
+ confmat1 = confusionmat(Ytest,y_pred1); 
+  
+ y_pred2 = predict(RF2,Xtest); 
+ confmat2 = confusionmat(Ytest,y_pred2); 
+  
+ disp(<span class="string">'Confusion Matrix - without surrogates'</span>) 
+ disp(confmat1) 
+ disp(<span class="string">'Confusion Matrix - with surrogates'</span>) 
+ disp(confmat2) 
+ </pre><pre class="codeoutput">Confusion Matrix - without surrogates 
+     67     1 
+     24    13 
+  
+ Confusion Matrix - with surrogates 
+     65     3 
+      4    33 
+  
+ </pre><h2>Visualize Misclassification Error<a name="7"></a></h2><p>Decreasing value with number of trees indicates good performance.</p><pre class="code">figure 
+ subplot(2,2,1:2) 
+ plot(loss(RF1,Xtest,Ytest,<span class="string">'mode'</span>,<span class="string">'cumulative'</span>),<span class="string">'LineWidth'</span>,3); 
+ hold <span class="string">on</span>; 
+ plot(loss(RF2,Xtest,Ytest,<span class="string">'mode'</span>,<span class="string">'cumulative'</span>),<span class="string">'r'</span>,<span class="string">'LineWidth'</span>,3); 
+ legend(<span class="string">'Regular trees'</span>,<span class="string">'Trees with surrogate splits'</span>); 
+ xlabel(<span class="string">'Number of trees'</span>); 
+ ylabel(<span class="string">'Test classification error'</span>,<span class="string">'FontSize'</span>,12); 
+  
+ subplot(2,2,3) 
+ [hImage, hText, hXText] = heatmap(confmat1, labels, labels, 1,<span class="string">'Colormap'</span>,<span class="string">'red'</span>,<span class="string">'ShowAllTicks'</span>,1); 
+ title(<span class="string">'Confusion Matrix - without surrogates'</span>) 
+ subplot(2,2,4) 
+ heatmap(confmat2, labels, labels, 1,<span class="string">'Colormap'</span>,<span class="string">'red'</span>,<span class="string">'ShowAllTicks'</span>,1); 
+ title(<span class="string">'Confusion Matrix - with surrogates'</span>) 
+ </pre><img src="Classification%20in%20the%20presence%20of%20missing%20data_files/Missing_Data_01.png" alt="" vspace="5" hspace="5"> <p>The misclassification error is much lower when surrogate splits are used with decision trees.</p> 
+ <p>The heatmap visualization in the subplot was generated using <a href="http://www.mathworks.com/matlabcentral/fileexchange/24253-customizable-heat-maps">Customizable Heat Maps</a>.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB® R2013b</a><br></p><!-- 
+ ##### SOURCE BEGIN ##### 
+ %% Classification in the presence of missing data 
+ %% 
+ % This example shows how decision trees with surrogate splits can be used 
+ % when predictions have to be made from missing data 
+ % Tags: _classification, random forests, ensemble learning, confusion matrix_ 
+ %% Load data for classification 
+ rng(10); % For reproducibility 
+ load ionosphere; 
+  
+ %% Partition the data into 70% training set and 30% validation set 
+ cv = cvpartition(Y,'holdout',0.3); 
+ Xtrain = X(training(cv),:); 
+ Ytrain = Y(training(cv)); 
+ Xtest = X(test(cv),:); 
+ Ytest = Y(test(cv)); 
+  
+ %% Random Forest algorithm to classify the ionosphere data 
+ % Random Forest is an Ensemble approach which involves training several 
+ % weak learners to create a strong classifier. 
+  
+ % Classification Tree is chosen as the learner 
+ learner1 = ClassificationTree.template('NVarToSample','all'); 
+ RF1 = fitensemble(Xtrain,Ytrain,'Bag',50,learner1,'type','classification'); 
+  
+ % Classification Tree with surrogate splits is chosen as the learner 
+ learner2 = ClassificationTree.template('NVarToSample','all','surrogate','on'); 
+ RF2 = fitensemble(Xtrain,Ytrain,'Bag',50,learner2,'type','classification'); 
+  
+ %% Create missing data 
+  
+ %% 
+ % Suppose half of the values in the test set are missing: 
+  
+ Xtest(rand(size(Xtest))>0.5) = NaN; 
+  
+ %% Predict responses using both approaches 
+  
+ y_pred1 = predict(RF1,Xtest); 
+ confusionmat(Ytest,y_pred1) 
+  
+ y_pred2 = predict(RF2,Xtest); 
+ confusionmat(Ytest,y_pred2) 
+  
+ %% Visualize misclassification error 
+ % Decreasing value with number of trees indicates good performance 
+  
+ figure; 
+ plot(loss(RF1,Xtest,Ytest,'mode','cumulative')); 
+ hold on; 
+ plot(loss(RF2,Xtest,Ytest,'mode','cumulative'),'rREPLACE_WITH_DASH_DASH'); 
+ legend('Regular trees','Trees with surrogate splits'); 
+ xlabel('Number of trees'); 
+ ylabel('Test classification error'); 
+      
+  
+  
+ ##### SOURCE END ##### 
+ -->     
+          
+  
+  
+   
+        
+  
+    
+  
+  
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+           
+   
+   
+  
+  
+ <div id="location_content" style="display:none;"></div> 
+  
+  
+ <div class="modal fade" id="country-unselected" translate="no"> 
+   <div class="modal-dialog modal-lg"> 
+     <div class="modal-content"> 
+       <div class="modal-header"> 
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+         <object type="image/svg+xml" class="mw_logo" alt="MathWorks" data="Classification%20in%20the%20presence%20of%20missing%20data_files/pic-header-mathworks-logo2.svg" width="167px"> 
+           <img alt="MathWorks" src="Classification%20in%20the%20presence%20of%20missing%20data_files/pic-header-mathworks-logo.png" width="167px"> 
+         </object> 
+       </div> 
+       <div class="modal-body"> 
+         <div class="row add_margin_40"> 
+           <div class="col-xs-12"> 
+             <h1 class="icon-globe icon_color_secondary">Select Your Country</h1> 
+             <p>Choose your country to get translated content where  
+ available and see local events and offers. Based on your location, we  
+ recommend that you select: <strong class="text_location"></strong>.</p> 
+             <a href="#" id="domain_select_button" class="btn btn_secondary" data-dismiss="modal"></a> 
+           </div> 
+         </div> 
+         <p>You can also select a location from the following list:</p> 
+         <div class="row add_margin_30"> 
+           <div class="col-sm-4 col-md-3"> 
+             <h3 class="add_bottom_rule">Americas</h3> 
+             <ul class="list-unstyled"> 
+               <li><a href="http://www.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="canada_select">Canada</a> (English)</li> 
+               <li><a href="http://www.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="united_states_select">United States</a> (English)</li> 
+             </ul> 
+           </div> 
+           <div class="col-sm-4 col-md-6"> 
+             <h3 class="add_bottom_rule">Europe</h3> 
+             <div class="row"> 
+               <div class="col-xs-6 col-sm-12 col-md-6"> 
+                 <ul class="list-unstyled add_margin_0_sm"> 
+                   <li><a href="http://nl.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="belgium_select">Belgium</a> (English)</li> 
+                   <li><a href="http://se.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="denmark_select">Denmark</a> (English)</li> 
+                   <li><a href="http://de.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="deutschland_select">Deutschland</a> (Deutsch)</li> 
+                   <li><a href="http://es.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="espana_select">España</a> (Español)</li> 
+                   <li><a href="http://se.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="finland_select">Finland</a> (English)</li> 
+                   <li><a href="http://fr.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="france_select">France</a> (Français)</li> 
+                   <li><a href="http://uk.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="ireland_select">Ireland</a> (English)</li> 
+                   <li><a href="http://it.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="italia_select">Italia</a> (Italiano)</li> 
+                   <li><a href="http://nl.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="luxembourg_select">Luxembourg</a> (English)</li> 
+                 </ul> 
+               </div> 
+               <div class="col-xs-6 col-sm-12 col-md-6"> 
+                 <ul class="list-unstyled"> 
+                   <li><a href="http://nl.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="netherlands_select">Netherlands</a> (English)</li> 
+                   <li><a href="http://se.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="norway_select">Norway</a> (English)</li> 
+                   <li><a href="http://de.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="osterreich_select">Österreich</a> (Deutsch)</li> 
+                   <li><a href="http://www.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="portugal_select">Portugal</a> (English)</li> 
+                   <li><a href="http://se.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="sweden_select">Sweden</a> (English)</li> 
+                   <li>Switzerland 
+                     <ul class="list-unstyled add_indent_20"> 
+                       <li><a href="http://ch.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" id="swiss_german" class="switzerland_select">Deutsch</a></li> 
+                       <li><a href="http://ch.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" id="swiss_french">Français</a></li> 
+                     </ul> 
+                   </li> 
+                   <li><a href="http://uk.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="united_kingdom_select">United Kingdom</a> (English)</li> 
+                 </ul> 
+               </div> 
+             </div> 
+           </div> 
+           <div class="col-sm-4 col-md-3"> 
+             <h3 class="add_bottom_rule">Asia Pacific</h3> 
+             <ul class="list-unstyled"> 
+               <li><a href="http://au.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="australia_select">Australia</a> (English)</li> 
+               <li><a href="http://in.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="india_select">India</a> (English)</li> 
+               <li><a href="http://au.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="new_zealand_select">New Zealand</a> (English)</li> 
+               <li><a href="http://cn.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="china_select">中国</a> (简体中文)</li> 
+               <li><a href="http://jp.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="japan_select">日本</a> (日本語)</li> 
+               <li><a href="http://kr.mathworks.com/solutions/machine-learning/examples.html?action=changeCountry&amp;file=%2Fproducts%2Fdemos%2Fmachine-learning%2Fmissing_data%2Fmissing_data.html&amp;s_eid=PSM_da&amp;s_tid=gn_loc_drop" class="korea_select">한국</a> (한국어)</li> 
+             </ul> 
+           </div> 
+         </div> 
+         <p class="text-center"><strong><a href="http://www.mathworks.com/company/worldwide/">See all countries</a></strong></p> 
+       </div> 
+     </div> 
+   </div> 
+ </div> 
+  
+         </div> 
+       </div> 
+     </div> 
+   </div> 
+        
+    
+  
+   <footer id="footer" class="bs-footer">  
+       <!-- FAT FOOTER - Begin -->  
+         <div class="fat_footer_container"> 
+           <div class="container"> 
+             <div class="row"> 
+               <div class="col-xs-12"> 
+                 <div class="grid_192"> 
+ <div class="fat_footer"> 
+ <div class="execmatlabweb"> <!--Requried for Doc Test --> 
+ <div class="row"> 
+ <div class="col-xs-12 col-md-12 col-lg-9 col-lg-push-3 add_margin_20"> 
+ <div class="row"> 
+ <div class="col-xs-12 col-sm-2"> 
+ <h5>Explore Products</h5> 
+ <ul class="list-unstyled"> 
+ <li><a href="http://www.mathworks.com/products/matlab/?s_tid=hp_ff_p_matlab">MATLAB</a></li> 
+ <li><a href="http://www.mathworks.com/products/simulink/?s_tid=hp_ff_p_simulink">Simulink</a></li> 
+ <li><a href="http://www.mathworks.com/academia/student_version/?s_tid=hp_ff_p_student">Student Software</a></li> 
+ <li><a href="http://www.mathworks.com/hardware-support/home.html?s_tid=hp_ff_p_hwsupport">Hardware Support</a></li> 
+ <li><a href="http://www.mathworks.com/matlabcentral/fileexchange/?s_tid=hp_ff_p_fx">File Exchange</a></li> 
+ </ul> 
+ </div> 
+ <div class="col-xs-12 col-sm-2"> 
+ <h5>Try or Buy</h5> 
+ <ul class="list-unstyled"> 
+ <li><a href="http://www.mathworks.com/downloads/web_downloads/?s_iid=hp_ff_t_downloads">Downloads</a></li> 
+ <li><a href="http://www.mathworks.com/programs/trials/trial_request.html?s_iid=hp_ff_p_trial">Trial Software</a></li> 
+ <li><a href="http://www.mathworks.com/company/aboutus/contact_us/contact_sales.html?s_iid=hp_ff_t_sales">Contact Sales</a></li> 
+ <li><a href="http://www.mathworks.com/pricing-licensing/?s_iid=hp_ff_t_pricing">Pricing and Licensing</a></li> 
+ </ul> 
+ </div> 
+ <div class="col-xs-12 col-sm-2"> 
+ <h5>Learn to Use</h5> 
+ <ul class="list-unstyled"> 
+ <li><a href="http://www.mathworks.com/help/?s_tid=hp_ff_l_doc">Documentation</a></li> 
+ <li><a href="http://www.mathworks.com/support/learn-with-matlab-tutorials.html?s_tid=hp_ff_l_tutorials">Tutorials</a></li> 
+ <li><a href="http://www.mathworks.com/examples/?s_tid=hp_ff_l_examples">Examples </a></li> 
+ <li><a href="http://www.mathworks.com/videos/?s_tid=hp_ff_l_videos">Videos and Webinars</a></li> 
+ <li><a href="http://www.mathworks.com/services/training/?s_tid=hp_ff_l_training">Training</a></li> 
+ </ul> 
+ </div> 
+ <div class="clearfix" id="offcanvas_clearfix" style="display:none"></div> 
+ <div class="col-xs-12 col-sm-2"> 
+ <h5>Get Support</h5> 
+ <ul class="list-unstyled"> 
+ <li><a href="http://www.mathworks.com/support/install-matlab.html?s_tid=hp_ff_s_install">Installation Help</a></li> 
+ <li><a href="http://www.mathworks.com/matlabcentral/answers/?s_tid=hp_ff_s_answers">Answers </a></li> 
+ <li><a href="http://www.mathworks.com/services/consulting/?s_tid=hp_ff_s_consulting">Consulting</a></li> 
+ <li><a href="http://www.mathworks.com/licensecenter/?s_tid=hp_ff_s_license">License Center</a></li> 
+ </ul> 
+ </div> 
+ <div class="col-xs-12 col-sm-2"> 
+ <h5>About MathWorks</h5> 
+ <ul class="list-unstyled"> 
+ <li><a href="http://www.mathworks.com/company/jobs/opportunities/?s_tid=hp_ff_a_careers">Careers</a></li> 
+ <li><a href="http://www.mathworks.com/company/?s_tid=hp_ff_a_company">Company Overview</a></li> 
+ <li><a href="http://www.mathworks.com/company/newsroom/?s_tid=hp_ff_a_newsroom">Newsroom</a></li> 
+ <li><a href="http://www.mathworks.com/company/aboutus/soc_mission/?s_tid=hp_ff_a_socialmission">Social Mission</a></li> 
+ </ul> 
+ </div> 
+ </div> 
+ </div> 
+ <div class="col-xs-12 col-md-12 col-lg-3 col-lg-pull-9"> 
+ <h4 class="add_font_futura_medium add_margin_0">MathWorks</h4> 
+ <p><em>Accelerating the pace of engineering and science</em></p> 
+ <p>MathWorks is the leading developer of mathematical computing software for engineers and scientists.</p> 
+ <p><a href="http://www.mathworks.com/discovery/?s_tid=">Discover...</a></p> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+               </div> 
+             </div> 
+           </div> 
+         </div> 
+       <!-- FAT FOOTER - End --> 
+     <!-- BASIC FOOTER CONTENT - Begin -->  
+     <div class="container">  
+       <div class="footer" translate="no"> 
+ <div class="row"> 
+ <div class="col-xs-12 col-md-9"> 
+ <ul class="countrynav" id="countrynav"> 
+ <li class="footernav_country"> 
+ <a href="javascript:void(0);" data-toggle="modal" data-target="#country-unselected"> 
+ <span class="icon-globe icon_color_quinary icon_16"></span>United States 
+ </a> 
+ </li> 
+ </ul> 
+ <div class="clearfix"></div> 
+ <ul class="footernav"> 
+ <li class="footernav_patents"><a href="http://www.mathworks.com/company/aboutus/policies_statements/patents.html?s_tid=gf_pat">Patents</a></li> 
+ <li class="footernav_trademarks"><a href="http://www.mathworks.com/company/aboutus/policies_statements/trademarks.html?s_tid=gf_trd">Trademarks</a></li> 
+ <li class="footernav_privacy"><a href="http://www.mathworks.com/company/aboutus/policies_statements/?s_tid=gf_priv">Privacy Policy</a></li> 
+ <li class="footernav_piracy"><a href="http://www.mathworks.com/company/aboutus/policies_statements/piracy.html?s_tid=gf_pir">Preventing Piracy</a></li> 
+ </ul> 
+ <div class="clearfix"></div> 
+ <div class="clearfix"></div> 
+ <p class="copyright" translate="no">© 1994-2016 The MathWorks, Inc.</p> 
+ </div> 
+ <div class="clearfix visible-sm add_margin_10"></div> 
+ <div class="col-xs-12 col-md-3"> 
+ <div class="social_media"> 
+ <ul class="social_media_icons"> 
+ <li> 
+ <a href="http://www.facebook.com/MATLAB" target="_blank" class="svg_link"> 
+ <img src="Classification%20in%20the%20presence%20of%20missing%20data_files/ico-facebook.svg" alt="Facebook" class="ico_facebook"> 
+ </a> 
+ </li> 
+ <li> 
+ <a href="http://www.twitter.com/MATLAB" target="_blank" class="svg_link"> 
+ <img src="Classification%20in%20the%20presence%20of%20missing%20data_files/ico-twitter.svg" alt="Twitter" class="ico_twitter"> 
+ </a> 
+ </li> 
+ <li> 
+ <a href="https://plus.google.com/117177960465154322866?prsrc=3" target="_blank" class="svg_link"> 
+ <img src="Classification%20in%20the%20presence%20of%20missing%20data_files/ico-google-plus.svg" alt="Google+" class="ico_google"> 
+ </a> 
+ </li> 
+ <li> 
+ <a href="http://www.linkedin.com/company/the-mathworks_2" target="_blank" class="svg_link"> 
+ <img src="Classification%20in%20the%20presence%20of%20missing%20data_files/ico-linkedin.svg" alt="LinkedIn" class="ico_linkedin"> 
+ </a> 
+ </li> 
+ <li> 
+ <a href="http://www.mathworks.com/company/rss/index.html" class="svg_link"> 
+ <img src="Classification%20in%20the%20presence%20of%20missing%20data_files/ico-rss.svg" alt="RSS" class="ico_rss"> 
+ </a> 
+ </li> 
+ </ul> 
+ <div class="clearfix"></div> 
+ <p><em>Join the conversation</em></p> 
+ </div> 
+ </div> 
+ </div> 
+ </div> 
+ <!-- BEGIN Adobe DTM --> 
+ <script type="text/javascript"> 
+ try { 
+ _satellite.pageBottom(); 
+ } catch (e) { 
+ //something went wrong 
+ } 
+ </script><script> 
+  var qcord;var qcrev; var qclabels; 
+  var ezt = ezt ||[]; 
+  
+  (function(){ 
+    var elem = document.createElement('script'); 
+    elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://pixel") + ".quantserve.com/aquant.js?a=p-zfNtLVVEHXE-1"; 
+    elem.async = true; 
+    elem.type = "text/javascript"; 
+    var scpt = document.getElementsByTagName('script')[0]; 
+    scpt.parentNode.insertBefore(elem,scpt); 
+  }()); 
+  
+  
+  ezt.push({qacct: 'p-zfNtLVVEHXE-1', 
+            orderid: qcord, 
+            revenue: qcrev, 
+            labels: qclabels 
+            }); 
+ </script> 
+ <noscript> 
+   <img src="//pixel.quantserve.com/pixel/p-zfNtLVVEHXE-1.gif?labels=_fp.event.Default" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/> 
+ </noscript><script src="Classification%20in%20the%20presence%20of%20missing%20data_files/satellite-570415b764746d19e0001b00.js"></script><div class="mboxDefault" style="visibility: visible; display: block;"></div><div id="mboxMarker-default-pk_da_all-0" style="visibility:hidden;display:none">&nbsp;</div><script src="Classification%20in%20the%20presence%20of%20missing%20data_files/standard"></script><div style="visibility: hidden; display: none" id="mboxImported-default-pk_da_all-0"><script type="text/javascript"> 
+ /*T&T Metadata v3 ==>Response Plugin*/ 
+ window.ttMETA=(typeof(window.ttMETA)!="undefined")?window.ttMETA:[];window.ttMETA.push({"CampaignName":"","CampaignId":"","RecipeName":"","RecipeId":"","OfferId":"","OfferName":"","MboxName":"pk_da_all"}); 
+ </script> 
+ <script type="text/javascript"> 
+ var test_name= ""; 
+ var tntRecipeName= ""; 
+ </script></div><!-- Google Remarketing Main Tag --> 
+ <script type="text/javascript"> 
+ /* <![CDATA[ */ 
+ var google_conversion_id = 1023777138; 
+ var google_custom_params = window.google_tag_params; 
+ var google_remarketing_only = true; 
+ /* ]]> */ 
+ </script> 
+ <script type="text/javascript" src="Classification%20in%20the%20presence%20of%20missing%20data_files/conversion.js"> 
+ </script><iframe name="google_conversion_frame" title="Google conversion frame" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1023777138/?random=1477060587769&amp;cv=8&amp;fst=1477060587769&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=1&amp;u_tz=120&amp;u_java=true&amp;u_nplug=13&amp;u_nmime=97&amp;frm=0&amp;url=http%3A%2F%2Fwww.mathworks.com%2Fsolutions%2Fmachine-learning%2Fexamples.html%3Ffile%3D%252Fproducts%252Fdemos%252Fmachine-learning%252Fmissing_data%252Fmissing_data.html%26s_eid%3DPSM_da&amp;ref=https%3A%2F%2Fwww.facebook.com%2F&amp;tiba=Classification%20in%20the%20presence%20of%20missing%20data" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" width="300" height="13" frameborder="0"></iframe> 
+ <noscript> 
+ <div style="display:inline;"> 
+ <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1023777138/?value=0&amp;guid=ON&amp;script=0"/> 
+ </div> 
+ </noscript> 
+ <!-- END Adobe DTM --> 
+     </div> 
+     <!-- BASIC FAT FOOTER CONTENT - End --> 
+   </footer> 
+  
+     <script src="Classification%20in%20the%20presence%20of%20missing%20data_files/lightbox-min.js"></script>  
+     <script> 
+       $(document).ready(function ($) { 
+  
+         // delegate calls to data-toggle="lightbox" 
+         $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) { 
+           event.preventDefault(); 
+           return $(this).ekkoLightbox({ 
+             onShown: function() { 
+ 				if ($('.ekko-lightbox-container iframe').length) { 
+ 				  $(".ekko-lightbox-container iframe").attr("scrolling","no"); 
+ 				  $(".ekko-lightbox-container iframe").load(lightboxIframeHeight); 
+ 				} 
+             }, 
+             onNavigate: function(direction, itemIndex) { 
+               if (window.console) { 
+                 return console.log('Navigating '+direction+'. Current item: '+itemIndex); 
+               } 
+             } 
+           }); 
+         }); 
+ 		 
+ 		// resize 
+ 		$(window).resize(lightboxIframeHeight)	 
+  
+ 		// lightbox height function 
+ 		function lightboxIframeHeight() { 
+ 			if ($('.ekko-lightbox-container iframe').length) { 
+ 				whichIframeHeight = $('.ekko-lightbox-container iframe').contents().find('body').height() + 20; 
+ 				$(".ekko-lightbox-container iframe").css("height",whichIframeHeight); 
+ 			} 
+ 		} 
+  
+         //Programatically call 
+         $('#open-image').click(function (e) { 
+           e.preventDefault(); 
+           $(this).ekkoLightbox(); 
+         }); 
+         $('#open-youtube').click(function (e) { 
+           e.preventDefault(); 
+           $(this).ekkoLightbox(); 
+         }); 
+       }); 
+     </script>  
+  
+  
+  
+  
+ <a class="btn btn_primary" id="go-top"><span class="icon-arrow-open-up icon_24"></span></a><script src="index-file/high.js"></script></body></html>

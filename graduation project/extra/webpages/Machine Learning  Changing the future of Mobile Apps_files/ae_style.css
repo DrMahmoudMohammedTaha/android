@@ -1,0 +1,98 @@
+.mydiv {
+	width: 330px;
+	padding: 0px 0 15px 0;
+	position: relative;
+	position: absolute;
+	display: block;
+	background: #ebebeb;
+	border: #000000 1px solid;
+	
+/*fonts*/
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: left;
+	font-weight: normal;
+	color: #202020;
+	overflow: hidden;
+}
+
+.mydiv b {
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: left;
+	font-weight: bold;
+	font-style: regular;
+	color: #202020;
+	overflow: hidden;
+}
+
+.mydiv span.ae_top {
+	width: 100%;
+	background: url(../img/ae_bg.gif);
+	display: block;
+	line-height: 24px;
+}
+
+.mydiv span.ae_top b {
+	padding-left: 10px;
+}
+
+.mydiv span.ae_about {
+	width: 310px;
+	display: block;
+	padding: 15px 10px 0px 10px;
+}
+
+.mydiv span.ae_body {
+	width: 225px;
+	padding: 10px 10px 0px 10px;
+	display: block;
+	overflow: hidden;
+}
+
+.mydiv span.ae_close {
+	background: #BDD7FE;
+	position: absolute;
+	display: block;
+	bottom: 0;
+	right: 0;
+	padding: 1px 2px 0 5px;
+	margin: 0 2px 2px 0;
+}
+
+.mydiv span.ae_close a {
+	color: #2B2B2B !important;
+	text-decoration: none !important;
+}
+
+/* Gravatar Photo */
+
+.mydiv img {
+	width: 70px;
+	height: 70px;
+	display: block;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	padding: 4px !important;
+	background: #fff !important;
+	margin: 0 !important;
+	border: 0 !important;
+	
+}
+
+/* Link Styling */
+
+.mydiv a {
+	background: none !important;
+	border: 0 !important;
+	text-decoration: underline !important;
+	color: #BA2936 !important;
+}
+
+.mydiv a:hover {
+	text-decoration: none !important;
+}

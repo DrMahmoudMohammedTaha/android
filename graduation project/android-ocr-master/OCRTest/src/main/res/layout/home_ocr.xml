@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="35dp"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:text="Deststination"
+      android:id="@+id/textView"
+      android:layout_marginTop="80dp"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginLeft="43dp"
+      android:layout_marginStart="43dp"
+      android:layout_toStartOf="@+id/router"
+      android:layout_toLeftOf="@+id/router" />
+
+  <EditText
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:id="@+id/dest_p"
+      android:layout_alignTop="@+id/textView"
+      android:layout_toRightOf="@+id/textView"
+      android:layout_toEndOf="@+id/textView" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="35dp"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:text="Current"
+      android:id="@+id/textView2"
+      android:layout_marginTop="41dp"
+      android:layout_below="@+id/dest_p"
+      android:layout_alignLeft="@+id/textView"
+      android:layout_alignStart="@+id/textView" />
+
+  <EditText
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:id="@+id/current_p"
+      android:layout_alignTop="@+id/textView2"
+      android:layout_alignLeft="@+id/dest_p"
+      android:layout_alignStart="@+id/dest_p" />
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Get route"
+      android:id="@+id/router"
+      android:layout_marginTop="83dp"
+      android:layout_marginRight="53dp"
+      android:layout_marginEnd="53dp"
+      android:layout_below="@+id/current_p"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentEnd="true" />
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="SCAN it"
+      android:id="@+id/scanner"
+      android:layout_alignTop="@+id/router"
+      android:layout_alignLeft="@+id/textView2"
+      android:layout_alignStart="@+id/textView2" />
+
+</RelativeLayout>
