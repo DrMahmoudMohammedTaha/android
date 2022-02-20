@@ -1,0 +1,409 @@
+مسار ال Android Developer 👨‍💻❤ 📢📣
+-
+الحمدلله من مجهودي الشخصي قدرت اعمل البوست العظيم دا بس كل اللي طالبة منكم دعوي حلوة اني احقق حلمي وهدفي. 😊🙏❤
+-
+مسار الأندرويد كامل وازاي تبقي مطور تطبيقات اندرويد من غير ما تاخد ولا كورس برا في اي مكان هتتعلم كلة اونلاين بالعربي او بالانجليزي كمان 😉 مصادر عربية واجنبية كمان , واكتر من مدرب واللي ترتاح في شرحة 😁 
+-
+دا فعلا حقيقي وعن تجربة شخصبة الحمدلله انا حاولت اجمع قدر ما استطعت من المصادر اللي انا اتعلمت منها شخصيا مجال الاندرويد خلال فترة التحدي بتاعي اللي عملتة اللي هو كان 200 Days of code 🦸‍♂️💪 . واللي الحمدلله نجحت فية كانت نقلة عظيمة بالنسبة ليا اني اتعلم برمجة من غير ما ادفع ولا ربع جنية في كورس واحد اتعلمت الحمدللة كلة اون لاين بس لازم في كل دا يكون عندك هدف وطموح واصرارا والصبر عشان توصل لهدفك . 😉💪
+-
+انا مش هجبرك انك نتتعلم من الانترنت بس صدقني حقيقي دا كنز كبير وممكن توفر فلوسك وتتعلم كلة اونلاين وتبقي مطور ناجح في الاندرويد وزي ما قولت عن تجربة شخصة انا قررت اعمل البوست دا عشان لاقيت شباب كتيرة محتارة وخايفة واللي مش عارف يعمل اية او اية هو المسار الصح اللي يمشي علية اولا بس نصيحة للناس :
+-
+نصيحة للمبتدئين أكتر الأسئلة اللي اي مبتدئ في البرمجة بيسألها واللي حقيقي كنت انا كمان اتعلمتها في بدايتي وعرفت قد اية هي مهمة :
+-
+1- عايز اتعلم البرمجة أبدأ منين ؟!
+-
+أولا : حدد هدفك واعرف انتا لية عايز تتعلم البرمجة ولازم انك تحط ليك هدف لأن لو معندكش وهتفضل تتعلم وخلاص هتخس بعد كدا بملل وإحباط وتشتت بسبب انة معندكش اي هدف !
+ثانيا : حدد مجالك لأنة عالم البرمجة كبيرة جدا متفرع ومتشعب كتير جدا فوق ما تتخيل هتحدداللي هتعلمة مثلا زي الأندرويد او الويب أو الديسك توب أو الذكاء الاصطناعي وغيرة كتييير .
+-
+2- اية هي المدة المطلوبة عشان اتقن لغة برمجة ؟!
+مفيش مدة محددة ولكنها بتعتمد علي شخصيتك وقدرتك علي الاستيعاب والمثابرة والتعلم ومثال ممكن تتقن لغة في خلال ٦ أشهر وزي ما قولت بيرجع ليك الوقت دا.
+-
+طيب وبعد كدا اعمل تمام , لما تختار مجال الانرويد هتحتاج يكون عندك مواصفات جهازك اللي هتشتغل عليه عشان تشتغل وانتا مستريح علي جهازك :
+-
+Windows requirements
+-
+Microsoft Windows 7/8/10 (32-bit or 64-bit)
+3 GB RAM minimum, 8 GB RAM recommended (plus 1 GB for the Android Emulator)
+2 GB of available disk space minimum, 4 GB recommended (500 MB for IDE plus 1.5 GB for Android SDK and emulator system image)
+1280 x 800 minimum screen resolution
+--------------------------------------------------
+Mac OS requirements
+-
+Mac OS X 10.10 (Yosemite) or higher, up to 10.13 (High Sierra)
+3 GB RAM minimum, 8 GB RAM recommended (plus 1 GB for the Android Emulator)
+2 GB of available disk space minimum, 4 GB recommended (500 MB for IDE plus 1.5 GB for Android SDK and emulator system image)
+1280 x 800 minimum screen resolution
+-------------------------------------------
+Linux OS requirements
+-
+GNOME or KDE desktop. Tested on Ubuntu 14.04 LTS, Trusty Tahr (64-bit distribution capable of running 32-bit applications)
+64-bit distribution capable of running 32-bit applications
+GNU C Library (glibc) 2.19 or later
+3 GB RAM minimum, 8 GB RAM recommended (plus 1 GB for the Android Emulator)
+2 GB of available disk space minimum, 4 GB recommended (500 MB for IDE plus 1.5 GB for Android SDK and emulator system image)
+1280 x 800 minimum screen resolution
+--------------------------------------------------
+طيب في ناس امكانيتها علي قدها والاجهزة ضعيفة شوية انا هقولك تعمل اية عشان تقدر بالمواصفات اللي عندك تشتغل بيها عشان كلنا عارفين اندرويد استوديو وحش رامات هههه بحد 
+ادني لازم يكون الرام عندك 4 جيجا
+-
+ودي شوية مساعدة من مجهودي الشخصي هتطبقها عشان الاجهزة الضعيفة :
+مهم للناس اللي لسة مبتدئة في الأندرويد 🔔
+-
+للناس اللي سألتني ازاي بتشتغل علي أندرويد استوديو برامات 4 جيجا ومعالج core i3 😎 واللي انا منهم 😅🤚عقبال ما ربنا يكرم ،😂 سهلة جدا وبسيطة بس اللي يتعب ويدور كان هيلاقي الحل ركزوا معايا :
+-
+1 - افتح ال File هتلاقي آخر حاجة تحت اسمها
+-
+Power save mode
+ودي وظيفتها بتقلل استخدام الكومبيلر وبتخلية اوف لاين عشان بياخد نسبة كبيرة من الرامات وبيوقف بعض الحاجات اللي كلها استخدام كتير وبيحافظ علي استخدام البرنامج والجهاز في نفس الوقت
+-
+2- افتح setting اختار منها gradle هتلاقي في النص اختيار اسمة offline work
+-
+3 - ممكن تستغني عن الايملاتر الخاص بالاندرويد او الجهاز المحاكي وفي بديل كتييير جدا وبياخد مساحة قليلة من الرمات منهم المشهور جدا : genymotion 😉
+-
+او ممكن تعمل Run علي موبايلك ودي اسهل وأجمل الطرق بمجرد ما توصل موبيلك باللاب بتاعك هيجيلك اشعار من الاستوديو انك ممكن تعمل ربط مع موبيلك بس شرط خاصية ال
+USB Debug
+-
+من اختيار developer options 😉
+وبس خلاص ااقدر ااقولك تقدر تتعلم أندرويد وانتا مطمن عقبال ما ربنا يفتحها علينا ونعمل Upgrade للجهاز بتاعنا 😂🤚
+-
+حلو اوي كدا يا عم محمد اعمل اية بقا بعد كدا عشان اتعلم بص يا صديقي دا مسار الاندرويد من البداية للنهاية :
+-
+-
+🔴 level one
+-
+🔵Principles of java
+-
+➖ What's Java
+➖ Java history
+➖ Java Byte code
+➖ Java virtual machine
+➖ JRE Java runtime environment
+➖ JDK Java Development kit
+➖ SDK Software Development Kit
+➖ API Application Programming Interfaces
+➖ Variables
+➖ Data Types
+➖ Strings
+➖ Comments
+➖ Math Operations
+➖ Conditional statement if- switch
+➖ Looping
+➖ Arrays
+➖ Array List
+➖ Exceptions
+➖ Casting
+-
+🔵OOP
+-
+➖ Class
+➖ Object
+➖ Member Variable
+➖ Member method
+➖ Constructor
+➖ Access Modifiers
+➖ Non-Access Modifiers
+➖ Inheritance
+➖ Polymorphism
+➖ Interfaces
+➖ Abstraction
+🔵Algorithm 
+-
+🔵Data structure 
+-
+🔴level two
+-
+-
+🔵 Data base
+-
+➖ SQLlite
+➖ MySQL
+➖ Firebase
+-
+🔴level three - 3
+-
+Introduction to Android
+➖ What’s Android?
+➖ Why Android
+➖ Android Market
+➖ Android Versions
+➖ what’s new Android
+-
+🔵Android Architecture
+-
+➖ Android Stack
+➖ Android Features
+➖ Android Architecture layer
+-
+🔵Tools
+-
+➖ SDK (software development kit)
+➖ JDK (java development kit)
+➖ IDE (integrated development environment
+-
+🔵Android Studio
+-
+➖ Setup Android Studio
+➖ Android Manifest
+➖ Important Folders
+➖ Logcat
+➖ Emulator and genymotion
+-
+🔵Android Components
+-
+➖ Activities and services
+➖ Broadcast Receivers
+➖ Content Providers
+-
+🔵Building Application UI
+-
+➖ Material design concept
+➖ Layouts
+➖ Layouts type
+➖ attributes
+➖ View class
+-
+🔵Activities & Fragments
+-
+➖ Life Cycle
+➖ Resources
+➖ Navigation Drawer
+➖ Tab layout
+-
+🔵Intents
+-
+➖ Explicit Intents
+➖ Implicit Intent
+➖ Intent Filter
+-
+🔵List View
+-
+➖ Adapter
+➖ List views
+➖ Custom views
+➖ Recycler view
+-
+🔵Android HTTP Client & REST web service "Retrofit"
+-
+➖ HTTP Request & Response
+➖ Postman and parsing JSON
+➖ upload Image to server
+-
+🔵Advanced Topics
+-
+➖ Permissions
+➖ Google Maps
+➖ Select Image From Gallery OR Camera
+➖ Shared preferences
+➖ git version control
+-
+🔴level four
+-
+-
+🔵 Kotlin
+-
+➖ Kotlin With Android studio
+---------------------------------------------------------
+بعد كدا هتحتاج بقا تتطور من نفسك شوية وتتعلم لغة جديدة زي لغة Kotlin العظيمة عشان دي هتساعدك في انك تكتب كود ااقل بكتيييير عكس جافا واللي اساسا مبنية علي java  , هتقولي يعني استغني عن جافا لا طبعا لان جافا اساس كل حاجة .
+سؤال الناس المحتارة ؟؟
+-
+استخدم كوتلن ولا جافا ؟ 🤔
+-
+كوتلن هى لغة برمجة مفتوحة المصدر وفى2017 تم اعتمادها من جوجل لتطوير تطبيقات الاندرويد بجانب الجافا يعنى هى مش بتستبدل جافا خالص وابدا ولم يحدث😂
+بدات شركات كبيرة وصغيرة انها تحول من جافا لكوتلن زى (netflix-pinterest-slack-twitter-reddit-evernote)
+-
+تقدر تكتب كود كوتلن على (Android Studio - IntelliJIDEA - Eclipse)
+-
+هتسال نفسك سؤال انا دلوقتى استخدم اى لغة جافا ولا كوتلن؟!!!!!!!!!!!!!
+الاجابة هى ان ليك مطلق الحرية تستخدم جافا او كوتلن 😉 طيب جوجل لية اعتمدتها ؟😯
+-
+جوجل شافت انها افضل حل علشان تخلى المبرمج يركز على الفكرة اللى بيطبقها مش كم الكود اللى بيتكتب وكوتلن فيها مميزات كتير عن الجافا ومنها انها بتجمع بين خصائص ال object-oriented programming وال functional programming وكمان بتعتبر الشعار الرسمى ليها هو (write more concise code) بمعنى تقدر تكتب كود اقل بنسبة 40% من اللى هتكتبو بلغة جافا واخر حاجة ممكن نعرفها عن الكوتلن هى ال Extensions زى ال Extension functions وهى انك تضيف function لاى class حتى لو كان مبنى فى اللغة نفسها من غير متضطر تلجأ لل inheritance او ال design patterns 🤭
+-
+من الاخر كوتلن هتسهل عليك حاجات كتير وهنكتب عنها اكتر فى المستقبل بالتفصيل😎
+طبعا مش ناسي المصادر اللى تقدر تتعلم منها 🤝👌
+____________________________________________
+-
+باللغة العربية
+-
+-
+🔴 level one
+-
+java + MySQL by : Hassouna Academy
+https://www.youtube.com/playlist...
+java by : Muhammed Essa
+1- https://www.youtube.com/playlist...
+2- https://www.youtube.com/playlist...
+Data Structures & Algorithm By : Adel Nasim 
+https://www.youtube.com/playlist...
+Data Structures & Algorithm By : محمد شوشان
+https://www.youtube.com/playlist...
+Data Structures & Algorithm By : Hard-Code
+https://www.youtube.com/playlist...
+Data Structures & Algorithm By : TheNewBaghdad
+https://www.youtube.com/playlist...
+---------------------------------------------------------------------
+-
+🔴 level two
+-
+MySQL By : Hassouna Academy
+https://www.youtube.com/playlist...
+MySQL By : Abdullah Almehmadi
+https://www.youtube.com/playlist?list=PLA410065ED903BCA9
+MySQL By : Elzero Web School
+https://www.youtube.com/playlist...
+--------------------------------------------------------------------------
+-
+🔴 level two
+-
+Firebase By : Koutaiba Altellawi
+https://www.youtube.com/playlist...
+Firebase By : TheNewBaghdad
+https://www.youtube.com/playlist...
+Firebase By : Ahmed Azz
+https://www.youtube.com/playlist...
+----------------------------------------------------
+-
+🔴 level three
+-
+Android studio By : Muhammed Essa
+https://www.youtube.com/playlist...
+Android studio By : TheNewBaghdad
+https://www.youtube.com/playlist...
+Android studio By : Hassouna Academy
+https://www.youtube.com/playlist...
+Android studio By : Salim 3dd
+https://www.youtube.com/playlist...
+------------------------------------------------
+-
+🔴 level four
+-
+Kotlin By : Mohamed Tamer
+https://www.youtube.com/playlist...
+Kotlin By : TheNewBaghdad
+https://www.youtube.com/playlist...
+Kotlin By : Hassouna Academy
+https://www.youtube.com/playlist...
+Kotlin By : Muhammed Essa
+https://www.youtube.com/playlist...
+________________________________________________________
+{EN}
+-
+باللغة الأنجليزية
+-
+-
+🔴 level one
+-
+java By : Mosh
+https://www.youtube.com/watch?v=eIrMbAQSU34&t=5865s
+java By : thenewboston
+https://www.youtube.com/playlist?list=PLFE2CE09D83EE3E28
+java By: freeCodeCamp
+https://www.youtube.com/watch?v=grEKMHGYyns&t=12892s
+Data Structures & Algorithm By : CS Dojo
+https://www.youtube.com/watch?v=bum_19loj9A
+Data Structures & Algorithm By : freeCodeCamp
+https://www.youtube.com/watch?v=RBSGKlAvoiM&t=11621s
+https://www.youtube.com/watch?v=09_LlHjoEiY&t=7566s
+Data Structures & Algorithm By : Mosh
+https://www.youtube.com/watch?v=BBpAmxU_NQo&t=2279s
+Data Structures & Algorithm By :  Naresh i Technologies
+https://www.youtube.com/playlist...
+Data Structures & Algorithm By : Abdul Bari
+https://www.youtube.com/watch?v=0IAPZzGSbME...
+--------------------------------------
+-
+🔴level two
+-
+MySQL By : Mosh
+https://www.youtube.com/watch?v=7S_tz1z_5bA
+MySQL By : freeCodeCamp
+https://www.youtube.com/watch?v=HXV3zeQKqGY
+MySQL By : ProgrammingKnowledge
+https://www.youtube.com/playlist...
+-----------------------------------------------------------------
+-
+🔴level two
+-
+Firebase By : TVAC Studio
+https://www.youtube.com/playlist...
+Firebase By : Hindi Tech Dude
+https://www.youtube.com/playlist...
+-------------------------------------------------------
+-
+🔴level three
+-
+Android studio By : edureka!
+https://www.youtube.com/watch?v=aS__9RbCyHg
+Android studio By : PRABEESH R K
+https://www.youtube.com/playlist?list=PLshdtb5UWjSrOJfpFOE-u55s3SnY2EO9vhttps://www.youtube.com/playlist?list=PLshdtb5UWjSrOJfpFOE-u55s3SnY2EO9v
+Android studio By : Android Developer
+https://www.youtube.com/playlist...
+Android studio By : ProgrammingKnowledge
+https://www.youtube.com/playlist...
+Android studio By : Jerry Banfield
+https://www.youtube.com/watch?v=00EbvyLlAJo
+--------------------------------------
+-
+🔴level four
+-
+1- Kotlin By : freeCodeCamp
+https://www.youtube.com/watch?v=F9UC9DY-vIU&t=4s
+2 - Kotlin By : freeCodeCamp
+https://www.youtube.com/watch?v=AeC4G-H-MQA&t=358s
+3 - Kotlin By : freeCodeCamp
+https://www.youtube.com/watch?v=Iz08OTTjR04&t=10662s
+Kotlin By : Telusko
+https://www.youtube.com/watch?v=I6rkwJed-HY&t=16145s
+Kotlin By : Derek Banas
+https://www.youtube.com/watch?v=H_oGi8uuDpA&t=3972s
+-
+مصار اخري : 
+-
+official Kotlin documentation :-
+https://kotlinlang.org/docs/reference/android-overview.html
+Kotlin Bootcamp for Programmers :-
+https://www.udacity.com/.../kotlin-bootcamp-for...
+Kotlin for Android Developers:-
+https://www.udacity.com/.../kotlin-for-android-developers...
+Developing Android Apps with Kotlin:-
+https://www.udacity.com/.../developing-android-apps-with...
+Advanced Android with Kotlin:-
+https://www.udacity.com/.../advanced-android-with-kotlin...
+========================================================
+👨‍💻 تحديث لمسار الأندرويد  😃✋ رجعتلكم بكورسات اندرويد جديدة السنة دي 2020 وكلها كورسات عظيمة جدا .
+=====================================
+👨‍💻 دي كورسات جديدة كاملة متكاملة من الصفر لشرح الاندرويد استوديو من الصفر فيها شرح بلغة جافا وكورسات بلغة كوتلن واللي اولهم بلاي ليست لأشهر مطور في جوجل واسبيكر في GDG اسمة 
+-
+Nate Ebel عامل كورس ب 9 اسابيع كورس اندرويد بلغة كوتلن كامل متكامل وانصح بية اي حد الصراحة وعن تجربة شخصية . وان شاء الله قريب هيكون فية تحديثات تاني بالنسبة للمسار والكورسات دي كمان هتتضاف علي البوست الرئيسي اللي اللينك بتاعة اهو فوق او هسيبة برضوا في الكومنتات . اتمني يارب انكم تستفادوا يارب وربنا يوفقكم جميعا ومتنسوش الدعوات 😊 .
+-
+=============================================
+🏆 الكورسات 
+{EN}
+-
+باللغة الأنجليزية
+By : Nate ebel 
+-
+1- 9 Week Android Development Course for Beginners
+-
+https://www.youtube.com/playlist...
+================================================
+2- Android Full Course - Learn Android in 9 Hours | Android Development Tutorial for Beginners| Edureka
+-
+https://www.youtube.com/watch?v=aS__9RbCyHg
+================================================
+3- Android Development for Beginners - Full Course
+-
+https://www.youtube.com/watch?v=fis26HvvDII&t=39781s
+================================================
+4- Android Full Course - Learn Android in 14 Hours | Android Development Tutorial for Beginners
+-
+https://www.youtube.com/watch?v=O3BVBzV58hg&t=9107s
+================================================
+5- Android Development Course - Build Native Apps with Kotlin Tutorial
+-
+https://www.youtube.com/watch?v=Iz08OTTjR04&t=10662s
+================================================
+6- Android Tutorials java And Kotlin By / Mohamed Tamer 
+-
+https://www.youtube.com/playlist...
+--------------------------------
+اذا كان لديك اي سؤال حول البرمجة لا تتردد في طرحه في التعليقات
