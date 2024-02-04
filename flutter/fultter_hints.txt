@@ -1,0 +1,35 @@
+
+file names in small letters and separated with underscore 
+
+
+VS code extensions:
+Awesome Flutter Snippets
+Material Icon Theme 
+Dart
+Flutter
+
+To build fultter 
+fultter clean
+flutter build apk
+
+What's the difference between AABs and APKs? App bundles are only for publishing and cannot be installed on Android devices
+
+Environment System Variable
+ANDROID_SDK_ROOT
+C:\Users\compu gate\AppData\Local\Android\Sdk
+
+
+The release bundle for your app is created at [project]/build/app/outputs/bundle/release/app.aab
+
+
+
+- everything starts in a capital letter is a widget
+- everytihng starts in a small letter is an argument
+
+- app starts from 
+void main(){
+	runApp(const MyApp());
+}
+
+- Example: create class MyApp
+ 
